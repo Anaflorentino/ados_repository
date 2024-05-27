@@ -12,6 +12,7 @@ To-do:
 
 Done:
 
+* function para fechar o accordion da FAQ section;
 * criar página de privacy policy;
 * subir em um repositório no github
 * Arquitetura modular escalável com SMACSS;
