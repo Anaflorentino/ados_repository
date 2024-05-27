@@ -1,0 +1,55 @@
+// fonts
+$primary-font: 'Onest', sans-serif;
+
+
+// colors
+$bg-color: #1E1E1E;
+$card-bg-color: #2B2B2B;
+$text-white-color: #fff;
+$text-special-color: #FBE9BE;
+$text-off-white85-color: rgba(255, 255, 255, 0.85);
+$text-off-white45-color: rgba(255, 255, 255, 0.45);
+$text-muted-color: rgba(255, 255, 255, 0.25);
+
+
+// gradients
+$gradient-primary: #7c70fff3;
+$gradient-secondary: #F678FF;
+$gradient-dark: #2c2c2c;
+$gradient-darker: #1e1e1e;
+
+%text-gradient {
+  background: linear-gradient(to right, $gradient-primary 40%, $gradient-secondary 60%);
+  color: transparent; 
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+%text-left-gradient {
+  background: linear-gradient(to right, #7c70fff3 2%, #F678FF 16%);
+  color: transparent; 
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200%; 
+  background-position: left;
+  transition: background-size 0.5s ease;
+}
+
+%btn-gradient {
+  background: linear-gradient(90deg,  $gradient-primary 0%, #F678FF 100%);
+}
+
+%border-bottom-gradient {
+    background: rgba(30, 30, 30, 0.75);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: solid 1px;
+    border-image: linear-gradient(to right, #1e1e1e, #2C2C2C, #1e1e1e) 1;
+    border-radius: 12px;
+}
+
+// spacers
+%section-spacer {
+  margin: 6rem 0;
+}

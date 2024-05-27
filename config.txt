@@ -1,0 +1,12 @@
+Trabalhando com Sass
+Aqui está um guia passo-a-passo para trabalhar com um projeto que utiliza Sass.
+
+1. Instale o Sass
+$  npm install -g sass
+
+2. Compilando
+$ sass scss/main.scss css/main.css
+
+
+
+

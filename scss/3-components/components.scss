@@ -1,0 +1,35 @@
+// Todos os imports que serão utilizados para construir os componentes
+@use '../1-base/variables';
+@use '../1-base/styles';
+
+
+// botão
+%btn {
+    background-color: transparent;
+            display: inline-flex;
+            padding: .7rem 1.4rem;
+            color: variables.$text-special-color;
+            font-size: 1rem;
+            text-decoration: none;
+            align-items: center;
+            border-radius: .6rem;
+}
+
+// botão cta
+%cta-btn {
+    @extend %btn-gradient;
+    display: inline-block;
+    padding: 1rem;
+    color: variables.$bg-color;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: .6rem;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+
+    img {
+        margin-left: .6rem;
+        height: 1rem; 
+    }
+}
+

@@ -1,0 +1,20 @@
+AdosLabs
+
+To-do:
+
+* tornar as sections responsivas para dispositivos menores;
+* último accordion do Faq não deve conter padding bottom (por conta do position sticky do title - fica entranho);
+* suavizar a transição dos gradientes nos títulos que ficam à esquerda;
+* personalizar os inputs de check do formulário;
+* criar bordas suaves para os cards
+
+* subir em um repositório no github
+---------------------------------------------------------
+
+Done:
+
+* Arquitetura modular escalável com SMACSS;
+* Sistema BEM de nomenclatura de classes e atributos;
+* SASS/SCSS como pré-compilador CSS;
+* Tags semânticas para otimizar o SEO;
+* Seções comentadas;

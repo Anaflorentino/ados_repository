@@ -1,0 +1,74 @@
+@use '../1-base/_variables';
+@use '../1-base/styles';
+
+.faq__container {
+    @extend %section-spacer;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.faq {
+    &__header {
+        flex: 0 0 25%;
+        position: -webkit-sticky; /* Para navegadores mais antigos */
+        position: sticky;
+        top: 116px;
+        z-index: 0;
+        h2 {
+            @extend %text-left-gradient;
+            @extend %title-text;
+        }
+        p {
+            @extend %subtitle-text;
+        }
+    }
+    &__accordion {
+        flex: 0 0 75%;
+        display: block;
+        width: 100%;
+        &__item {
+            border-radius: 12px;
+            background-color: variables.$card-bg-color;
+            margin-bottom: 1.4rem;
+            transition: .2s;
+            &:hover, &.active {
+                cursor: pointer; 
+                background-color: lighten(variables.$card-bg-color, 4%);
+             }
+        }
+    }
+    &__question {
+        width: 100%;
+        padding: 2rem;
+        background-color: transparent; /* Transparente para herdar a cor de fundo do contêiner pai */
+        color: variables.$text-special-color;
+        font-family: variables.$primary-font;
+        font-size: 1rem;
+        text-align: left;  
+        font-weight: 600;
+        cursor: pointer;
+        border: none;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        transition: .4s;
+        i {
+            float: right;
+            font-size: .7rem;
+            
+        }
+    }
+    &__answer {
+        padding: 0rem 2rem 2rem 2rem;
+        font-family: variables.$primary-font;
+        font-size: 1rem;
+        text-align: left;  
+        color: variables.$text-off-white85-color;
+        font-weight: 300;
+        display: none;
+    }
+}
+
+.rotate-icon {
+    rotate: 180deg;
+}

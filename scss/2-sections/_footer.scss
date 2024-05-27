@@ -1,0 +1,23 @@
+@use '../1-base/styles';
+@use '../1-base/variables';
+
+footer {
+    @extend %section-spacer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid;
+    @extend %border-bottom-gradient;
+    border-bottom: none;
+    margin-bottom: 1rem;
+    img {
+        margin-top: 2rem;
+        margin-bottom: .8rem;
+        height: 2rem;
+    }
+    h4 {
+        font-weight: 200;
+        font-size: .8rem;
+        color: variables.$text-off-white45-color;
+    }
+}

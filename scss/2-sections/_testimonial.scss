@@ -1,0 +1,67 @@
+@use '../1-base/styles';
+@use '../1-base/variables';
+
+.testimonials {
+  &__container {
+    @extend %section-spacer;
+  }
+
+  &__header {
+    margin-bottom: 2rem;
+    text-align: center;
+
+    h2 {
+      @extend %title-text;
+      @extend %text-gradient;
+    }
+
+    h3 {
+      @extend %subtitle-text;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    .testimonial-card {
+      width: 49%;
+      background-color: variables.$card-bg-color;
+      padding: 2rem;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+
+      p {
+        @extend %p-text;
+      }
+
+      &__info {
+        margin-top: 1.5rem;
+        display: flex;
+        align-items: center;
+
+        img {
+          height: 54px;
+          margin-right: 1.2rem;
+          border-radius: 50%; /* Torna a imagem circular */
+        }
+      }
+    }
+  }
+}
+
+.testimonial-card__name {
+  p {
+    font-size: 0.8rem;
+    line-height: 0.8;
+    font-weight: normal;
+    color: variables.$text-special-color;
+  }
+
+  span {
+    font-size: 0.8rem;
+    font-weight: light;
+    color: variables.$text-off-white45-color;
+  }
+}

@@ -1,0 +1,66 @@
+@use '../1-base/variables';
+@use '../1-base/styles';
+@use '../3-components/components.scss';
+
+.hero {
+    @extend %section-spacer;
+    display: flex;
+    align-items: center;
+
+    &__content {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__text {
+        max-width: 50%;
+        text-align: left;
+
+        a {
+            font-size: 1.4rem;
+            line-height: 0;
+        }
+
+        &-subtitle {
+            color: variables.$text-off-white45-color;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0;
+            text-transform: uppercase;
+        }
+
+        &-title {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        // botão cta
+        &-cta {
+         @extend %cta-btn;
+
+            img {
+                margin-left: .6rem;
+                height: 1rem; 
+            }
+
+            // &:hover {
+            //    hover glow effect
+            // }
+        }
+    }
+
+    &__video {
+        width: 48%;
+        cursor: pointer;
+
+        &-frame {
+            max-width: 100%;
+            border-radius: 1rem;
+        }
+    }
+}

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdosLabs</title>
+    <!-- Google Fonts: Onest -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- Font-Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- main.css -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!-- h e a d e r -->
+    <header id="header">
+        <!-- nav -->
+        <nav class="navbar">
+            <div class="navbar__logo">
+                <a href="#" class="navbar__logo-link">
+                    <img src="./img/logos/ados-logo.svg" alt="AdosLabs - logo" class="navbar__logo-img">
+                </a>
+            </div>
+            <!-- menu links -->
+            <ul class="navbar__menu">
+                <li class="navbar__menu-item"><a href="#" class="navbar__menu-link">Services</a></li>
+                <li class="navbar__menu-item"><a href="#" class="navbar__menu-link">How it works</a></li>
+                <li class="navbar__menu-item"><a href="#" class="navbar__menu-link">Plans</a></li>
+                <li class="navbar__menu-item"><a href="#" class="navbar__menu-link">FAQ</a></li>
+                <li class="navbar__menu-item"><a href="#" class="navbar__menu-link">Testimonials</a></li>
+            </ul>
+            <!-- contact button -->
+            <div class="navbar__contact">
+                <a href="#" class="contact-button navbar__contact-button">Contact us</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <!-- h e r o -->
+        <main>
+            <section class="hero">
+                <div class="hero__content">
+                    <div class="hero__text">
+                        <p class="hero__text-subtitle">THE NEW WAY OF MARKETING</p>
+                        <h1 class="hero__text-title">ELEVATE YOUR BRAND IN THE DIGITAL WORLD!</h1>
+                        <a href="#" class="cta-button hero__text-cta">Contact us<img src="./img/icons/right-arrow.svg"
+                                alt="Arrow right - icon"></a>
+                    </div>
+                    <div class="hero__video">
+                        <video controls="" autoplay="" loop="" muted=""
+                            src="https://30d5a4a2840195e1d96a304d33112e8e.cdn.bubble.io/f1713221908455x818785965788955400/VSL%20AdosCircle%20final.mp4"
+                            style="width:98%;border-radius:16px;"></video>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- t r u s t e d - b y -->
+        <div class="trusted">
+            <div class="trusted__brands">
+                <p>Trusted by</p>
+                <ul>
+                    <li><img src="./img/brands/amaze.png" alt="Amaze - logo"></li>
+                    <li><img src="./img/brands/billboard.svg" alt="Billboard - logo"></li>
+                    <li><img src="./img/brands/fiat.svg" alt="Fiat - logo"></li>
+                    <li><img src="./img/brands/swipelaps.png" alt="Swipelaps - logo"></li>
+                </ul>
+            </div>
+            <div class="trusted__brands">
+                <p>Trusted aorund the world</p>
+                <ul>
+                    <li><span>USA</span></li>
+                    <li><span>Brazil</span></li>
+                    <li><span>Germany</span></li>
+                    <li><span>Switzerland</span></li>
+                    <li><span>Canada</span></li>
+                </ul>
+            </div>
+        </div>
+        <!-- h o w - i t - w o r k s -->
+        <section class="hiw__container">
+            <div class="hiw__text">
+                <h2>How it works</h2>
+                <p>3 steps to success</p>
+            </div>
+            <div class="hiw__cards">
+                <!-- Card 1 -->
+                <div class="hiw__cards__item">
+                    <h3>Get in touch</h3>
+                    <p>Lets jump on a call and see if we are good fit to work together</p>
+                    <img class="card__animation" src="./img/icons/card-icon.svg" alt="card animation">
+                </div>
+                <!-- Card 2 -->
+                <div class="hiw__cards__item hiw__cards__item--height">
+                    <img class="card__animation" src="./img/icons/card-icon.svg" alt="card animation">
+                    <h3>Agreement and take off</h3>
+                    <p>If we are a good fit, we clarify our service and goals for our partnership. As soon as that is
+                        done, we are ready to take off</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="hiw__cards__item">
+                    <h3>Fullfilment</h3>
+                    <p>We always deliver in time and if possible even faster.</p>
+                    <img class="card__animation" src="./img/icons/card-icon.svg" alt="card animation">
+                </div>
+            </div>
+        </section>
+        <!-- f a q -->
+        <section class="faq">
+            <div class="faq__container">
+                <div class="faq__header">
+                    <h2>FAQ</h2>
+                    <p>Eliminate your doubts</p>
+                </div>
+                <!-- accordion -->
+                <div class="faq__accordion">
+                    <div class="faq__accordion__item">
+                        <!-- pergunta 1 -->
+                        <button class="faq__question" id="q1">
+                            Why should I choose AdosLabs over a cheaper freelancer?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <!-- resposta 1 -->
+                        <div class="faq__answer" id="a1">
+                            <p>
+                                AdosLabs is an agency dedicated to customer satisfaction. With us, you can avoid the
+                                unpredictability of missed deadlines, inconsistent work quality, or the need for
+                                constant
+                                communication and oversight. We offer the expertise of a dedicated team to ensure your
+                                projects
+                                run smoothly and consistently meet high-quality standards. We not deliver only
+                                sensational
+                                results, but the right execution with ease and efficiency.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq__accordion__item">
+                        <!-- pergunta 2 -->
+                        <button class="faq__question" id="q2">
+                            What can I expect from my subscription?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <!-- resposta 2 -->
+                        <div class="faq__answer" id="a2">
+                            <p>
+                                Your subscription plan is designed to guarantee you a minimum number of videos each
+                                month,
+                                ensuring you always have fresh and high-quality content to gift to your audience. We
+                                work mainly
+                                with minimalist motion videos or explainer videos but we are always open for new
+                                challenges.
+                                However, we often exceed these expectations, delivering more videos when our workload
+                                permits
+                                and we have sufficient content from your end.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq__accordion__item">
+                        <!-- pergunta 3 -->
+                        <button class="faq__question" id="q3">
+                            How much time do you need for one video?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <!-- resposta 3 -->
+                        <div class="faq__answer" id="a3">
+                            <p>
+                                We usually deliver within 2-3 business days. Depending on the complexity and length of
+                                the video, it can take more or less time. We are always at our desks and ensure
+                                consistent delivery with no unexpected waiting times. By the way, customer satisfaction
+                                is our priority. We will optimize the videos to your wish up to 3 times per project.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq__accordion__item">
+                        <!-- pergunta 4 -->
+                        <button class="faq__question" id="q4">
+                            How can I make a request?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <!-- resposta 4 -->
+                        <div class="faq__answer" id="a4">
+                            <p>
+                                We create a Trello platform for each client, making it easy for you to make requests and
+                                keep
+                                you up to date. Request can be made with a simple script or topic suggestion from your
+                                end.
+                                We
+                                will take care of concepts and visuals. Of course you can deliver more like storyboard
+                                or
+                                even
+                                loom videos, everything that helps us to take your vision into reality. During our
+                                onboarding
+                                process, we will introduce you to our platforms and explain in detail how we work.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq__accordion__item">
+                        <!-- pergunta 5 -->
+                        <button class="faq__question" id="q5">
+                            How can I make a request?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <!-- resposta 5 -->
+                        <div class="faq__answer" id="a5">
+                            <p>
+                                We create a Trello platform for each client, making it easy for you to make requests and
+                                keep you up to date. Request can be made with a simple script or topic suggestion from
+                                your end. We will take care of concepts and visuals. Of course you can deliver more like
+                                storyboard or even loom videos, everything that helps us to take your vision into
+                                reality. During our onboarding process, we will introduce you to our platforms and
+                                explain in detail how we work.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq__accordion__item">
+                        <!-- pergunta 6 -->
+                        <button class="faq__question" id="q6">
+                            How does the process of developing a web page work?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <!-- resposta 6 -->
+                        <div class="faq__answer" id="a6">
+                            <p>
+                                When choosing to build your site with us, you'll have access to a team of experienced
+                                developers
+                                with a successful track record.
+                            </p>
+
+                            <p>
+                                Our method of work is continuous delivery, which means you'll receive weekly updates and
+                                have
+                                approval opportunities where you can request changes before we move on to the next
+                                development
+                                phase.
+                            </p>
+
+                            <p>
+                                You'll be able to decide on layouts, color choices, and visual elements, and our team
+                                will
+                                ensure a positive and cohesive user experience.
+                            </p>
+                            <p>
+                                We develop web applications accessible via browser, suitable for desktops, smartphones,
+                                and
+                                tablets.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq__accordion__item">
+                        <!-- pergunta 7 -->
+                        <button class="faq__question" id="q7">
+                            Is ongoing support and maintenance included after the project is completed?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <!-- resposta 7 -->
+                        <div class="faq__answer" id="a7">
+                            <p>
+                                Yes, we offer ongoing support and maintenance services to ensure your website or
+                                software
+                                continues to perform optimally.
+                            </p>
+                            <p>
+                                Whether you need updates, troubleshooting assistance, or
+                                additional enhancements, our team is here to provide continued support to help you stay
+                                ahead in
+                                the digital landscape.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- t e s t i m o n i a l s -->
+        <section class="testimonials">
+            <div class="testimonials__header">
+                <h2>Testimonials</h2>
+                <h3>That’s what other people think about our services</h3>
+            </div>
+            <div class="testimonials__cards">
+                <div class="testimonial-card">
+                    <p>
+                        I had a fantastic experience working with the Adoslabs team. They were attentive to my needs,
+                        creative in their approach, delivered all the videos in time and exceeded my expectations. The
+                        animations they created for my profile went viral several times!! The content was not only
+                        visually stunning but also effectively communicated the message I wanted to convey. I highly
+                        recommend their services to anyone looking for top-notch content creation work.
+                    </p>
+                    <div class="testimonial-card__info">
+                        <img src="./img/testimonial/ale.png" alt="Client's profile picture">
+                        <div class="testimonial-card__name">
+                            <p>Alessandro</p>
+                            <span>CEO Millionated LLC</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>
+                        Our company had the pleasure of collaborating with the Adoslabs team for several months, and
+                        each time they delivered exceptional results. Their attention to detail and ability to translate
+                        complex ideas into captivating animations is truly impressive. Thanks to their work, our brand
+                        has been
+                        able to grow more than 5K followers and engage our audience in exciting ways. We look forward to
+                        continuing our partnership with them for a long time to come.
+                    </p>
+                    <div class="testimonial-card__info">
+                        <img src="./img/testimonial/Screenshot 2024-04-15 at 20.31.09.png"
+                            alt="Client's profile picture">
+                        <div class="testimonial-card__name">
+                            <p>Silas</p>
+                            <span>Ülkü Media EF</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- c o n t a c t - f o r m -->
+        <div class="contact">
+            <div>
+                <div class="contact__header">
+                    <h2>Do you have a cool project?</h2>
+                    <h3>Let's talk!</h3>
+                    <i class="fa-regular fa-envelope"></i> <span>adosmind@gmail.com</span>
+                </div>
+            </div>
+            <form class="form" action="file.php" method="post" id="form">
+                <h3 class="form__title">Fill this form and we will get back to you asap</h3>
+                <!-- Name & Company -->
+                <div class="form__row">
+                    <div class="form__group">
+                        <label class="label label--hidden" for="name">Full name*</label>
+                        <input type="text" name="name" id="name" placeholder="Full name*" required
+                            aria-label="Full name">
+                    </div>
+
+                    <div class="form__group">
+                        <label class="label label--hidden" for="company">Company</label>
+                        <input type="text" name="company" id="company" placeholder="Company name">
+                    </div>
+                </div>
+                <!-- E-mail & Phone number -->
+                <div class="form__row">
+                    <div class="form__group">
+                        <label class="label label--hidden" for="email">E-mail*</label>
+                        <input type="email" name="email" id="email" placeholder="E-mail*" required aria-label="Email">
+                    </div>
+
+                    <div class="form__group">
+                        <label class="label label--hidden" for="tel">Phone number</label>
+                        <input type="tel" name="tel" id="tel" placeholder="Phone number" aria-label="Phone number">
+                    </div>
+                </div>
+                <!-- Country & Selector... -->
+                <div class="form__row">
+                    <!-- "country" -->
+                    <div class="form__group">
+                        <label class="label label--hidden" for="country">Country*</label>
+                        <input type="text" name="country" id="country" placeholder="Country*" required
+                            aria-label="Country">
+                    </div>
+                    <!-- "I am a..."" -->
+                    <div class="form__group">
+                        <label class="label label--hidden" for="select">I am a...</label>
+                        <select name="select" id="select" required aria-label="Select">
+                            <option value="" disabled selected class="placeholder">I am a...</option>
+                            <option value="op-1">Person</option>
+                            <option value="op-2">Entrepreneur</option>
+                            <option value="op-3">Company</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Socials & Services  -->
+                <div class="form__row form__group-socials">
+                    <!-- "Show us your socials" -->
+                    <div class="form__group form__group-full">
+                        <label class="label" for="social">Show us your socials</label>
+
+                        <div class="input-container">
+                            <i class="fa-brands fa-instagram"></i>
+                            <input type="text" name="instagram" id="social-1" placeholder="Instagram">
+                        </div>
+
+                        <div class="input-container">
+                            <i class="fa-brands fa-tiktok"></i>
+                            <input type="text" name="tiktok" id="social-2" placeholder="Tik Tok">
+                        </div>
+                        <div class="input-container">
+                            <i class="fa fa-globe"></i>
+                            <input type="text" name="website" id="social-3" placeholder="Website">
+                        </div>
+                    </div>
+                    <!-- "Which service are you looking for?"" -->
+                    <div class="form__group form__group-full form__group-services">
+                        <label for="services">Which service are you looking for?</label>
+                        <div class="service-1">
+                            <input type="checkbox" name="services[]" value="Motion Videos">
+                            <label class="service label" for="service-1">Motion Videos</label>
+                        </div>
+                        <div class="service-2">
+                            <input type="checkbox" name="services[]" value="Webdesign">
+                            <label class="service label" for="service-2">Webdesign</label>
+                        </div>
+                        <div class="service-3">
+                            <input type="checkbox" name="services[]" value="Branding">
+                            <label class="service label" for="service-3">Branding</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Message textarea -->
+                <div class="form__group form__group-full">
+                    <label class="label label--hidden" for="message">Message</label>
+                    <textarea name="message" id="message" placeholder="Message" aria-label="Message"></textarea>
+                </div>
+                <div id="privacy">
+                    <!-- Privacy policy -->
+                    <div class="form__group form__group-full" id="policy">
+                        <p>By continuing, you agree to our <a href="#"><span>privacy policy.</span></a></p>
+                    </div>
+                    <!-- Submit button -->
+                    <button class="cta-button" type="submit">Send to contact us</button>
+                </div>
+            </form>
+        </div>
+        <!-- f o o t e r -->
+        <footer>
+            <a href="#"><img src="./img/logos/ados-logo.svg" alt="AdosLabs - logo"></a>
+            <h4>®2024 AdosLabs. All rights reserved to AdosMind and Torrance Labs.</h4>
+        </footer>
+
+        <!-- JavaScript -->
+        <script src="./scripts/faq.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+@use '../1-base/_variables';
+@use '../1-base/_styles';
+
+.hiw__container {
+    @extend %section-spacer;
+    padding: 2rem;
+}
+
+.hiw__text {
+    @extend %subtitle-text;
+    text-align: center;
+    margin-bottom: 2rem;
+
+    h2 {
+       @extend %title-text;
+        @extend %text-gradient;
+    }
+}
+
+.hiw__cards {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    gap: 2rem; 
+}
+
+.hiw__cards__item {
+    height: 380px;
+    &--height {
+        height: 400px;
+    }
+    .card__animation {
+        height: 94px;
+        width: 100%;
+    }
+    h3 {
+        font-size: 1.8rem;
+        color: variables.$text-off-white85-color; 
+        line-height: 1.2;
+        margin-bottom: .5rem;
+        margin-top: 1rem;
+    }
+    p {
+        margin-bottom: 2rem;
+        color: variables.$text-off-white45-color; 
+    }
+    text-align: center;
+    padding: 3.5rem 2.8rem;
+    background-color: #2c2c2c; 
+    width: 29%;
+    box-sizing: border-box;
+    border-radius: 16px;
+}
