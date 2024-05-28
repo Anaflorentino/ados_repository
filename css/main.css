@@ -724,6 +724,9 @@ footer h4 {
 .services__container .services__content .services__left .services__item .content button:hover span {
   margin-left: 0.6rem;
 }
+.services__container .services__content .price {
+  display: flex;
+}
 .services__container .services__content .services__right {
   display: flex;
   flex-direction: column;
