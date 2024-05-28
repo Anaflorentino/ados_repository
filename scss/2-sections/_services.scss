@@ -1,0 +1,21 @@
+@use '../1-base/variables';
+@use '../1-base/styles';
+
+.services__container {
+    @extend %section-spacer !optional;
+    padding: 2rem;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.services__text {
+    @extend %subtitle-text;
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+
+    h2 {
+       @extend %title-text;
+        @extend %text-gradient;
+    }
+}
