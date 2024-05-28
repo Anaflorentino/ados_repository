@@ -13,9 +13,9 @@
         @extend %subtitle-text;
         text-align: center;
         margin-bottom: 2rem;
-    
+
         h2 {
-           @extend %title-text;
+            @extend %title-text;
             @extend %text-gradient;
         }
     }
@@ -51,14 +51,11 @@
     }
 
     .services__content {
-
         min-height: 100vh;
         width: 100%;
         display: flex;
-        // gap: 6rem;
         margin: 8rem auto 0 auto;
         justify-content: space-between;
-
 
         .services__left, .services__right {
             display: flex;
@@ -70,7 +67,7 @@
             flex-direction: column;
 
             .services__item {
-                height: 50vh; //TIRAR DEPOIS
+                height: 50vh; // TIRAR DEPOIS
                 width: 100%;
                 display: flex;
                 gap: 1.5rem;
@@ -97,45 +94,49 @@
                         font-weight: 100;
                         opacity: .8;
                     }
+
                     p {
                         font-weight: 300;
                         opacity: .8;
                     }
 
-                    button {
-                        background-color: rgba($color: #ffffff, $alpha: 0.03);
-                        color: variables.$text-special-color;
-                        border-radius: 0.6rem;
-                        font-size: 1rem;
-                        font-weight: 500;
-                        padding: .8rem 1.5rem;
-                        border: none;
-                        cursor: pointer;
+                    .price {
                         display: flex;
-                        width: fit-content;
                         align-items: center;
-                        gap: 1rem;
-                        margin-top: 1rem;
+                        gap: 1rem; // Ajuste o espaçamento conforme necessário
 
+                        .cta-button {
+                            background-color: rgba($color: #ffffff, $alpha: 0.03);
+                            color: variables.$text-special-color;
+                            border-radius: 0.6rem;
+                            font-size: 1rem;
+                            font-weight: 500;
+                            padding: .8rem 1.5rem;
+                            border: none;
+                            cursor: pointer;
+                            display: flex;
+                            align-items: center;
+                            gap: 1rem;
 
-                        &:hover {
-                            background-color: #1f1f1f6b;
-                            span {
-                                margin-left: .6rem;
+                            &:hover {
+                                background-color: #1f1f1f6b;
+
+                                span {
+                                    margin-left: .6rem;
+                                }
                             }
+                        }
+
+                        .price-text {
+                            font-size: 1rem;
+                            color: variables.$text-off-white45-color;
                         }
                     }
                 }
             }
-
         }
 
-.price {
-    display: flex;
-}
-
         .services__right {
-
             display: flex;
             flex-direction: column;
             position: relative;
@@ -143,7 +144,7 @@
             .service__animation {
                 width: 60%;
                 position: absolute;
-                height: 50vh; //TIRAR DEPOIS
+                height: 50vh; // TIRAR DEPOIS
                 display: flex;
                 flex-direction: column;
             }
@@ -156,10 +157,6 @@
             #animacaoStep1 {
                 opacity: 1;
             }
-
         }
-        
     }
 }
-
-

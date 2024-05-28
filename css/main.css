@@ -703,7 +703,12 @@ footer h4 {
   font-weight: 300;
   opacity: 0.8;
 }
-.services__container .services__content .services__left .services__item .content button {
+.services__container .services__content .services__left .services__item .content .price {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.services__container .services__content .services__left .services__item .content .price .cta-button {
   background-color: rgba(255, 255, 255, 0.03);
   color: #FBE9BE;
   border-radius: 0.6rem;
@@ -713,19 +718,18 @@ footer h4 {
   border: none;
   cursor: pointer;
   display: flex;
-  width: fit-content;
   align-items: center;
   gap: 1rem;
-  margin-top: 1rem;
 }
-.services__container .services__content .services__left .services__item .content button:hover {
+.services__container .services__content .services__left .services__item .content .price .cta-button:hover {
   background-color: rgba(31, 31, 31, 0.4196078431);
 }
-.services__container .services__content .services__left .services__item .content button:hover span {
+.services__container .services__content .services__left .services__item .content .price .cta-button:hover span {
   margin-left: 0.6rem;
 }
-.services__container .services__content .price {
-  display: flex;
+.services__container .services__content .services__left .services__item .content .price .price-text {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.45);
 }
 .services__container .services__content .services__right {
   display: flex;
