@@ -1,0 +1,22 @@
+@use '../1-base/_variables';
+@use '../1-base/_styles';
+
+.services__container {
+    @extend %section-spacer;
+    padding: 2rem;
+    max-width: 1250px;
+    margin: 0 auto;
+
+    background-color: pink
+}
+
+.services__text {
+    @extend %subtitle-text;
+    text-align: center;
+    margin-bottom: 2rem;
+
+    h2 {
+       @extend %title-text;
+        @extend %text-gradient;
+    }
+}
