@@ -3,7 +3,6 @@ AdosLabs
 To-do:
 
 * tornar as sections responsivas para dispositivos menores;
-* último accordion do Faq não deve conter padding bottom (por conta do position sticky do title - fica entranho);
 * suavizar a transição dos gradientes nos títulos que ficam à esquerda;
 * criar bordas suaves para os cards
 * criar página de plans;
@@ -12,6 +11,7 @@ To-do:
 
 Done:
 
+* FAQ title otimizado;
 * function para fechar o accordion da FAQ section;
 * criar página de privacy policy;
 * subir em um repositório no github

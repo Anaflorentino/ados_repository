@@ -34,7 +34,7 @@
   background: linear-gradient(90deg, rgba(124, 112, 255, 0.9529411765) 0%, #F678FF 100%);
 }
 
-footer, .trusted, .navbar {
+footer, .trusted, .nav {
   background: rgba(30, 30, 30, 0.75);
   -webkit-backdrop-filter: blur(18px);
   border-bottom: solid 1px;
@@ -70,7 +70,7 @@ body {
   color: rgba(255, 255, 255, 0.85);
 }
 
-.navbar__contact-button {
+.nav__contact button {
   background-color: transparent;
   display: inline-flex;
   padding: 0.7rem 1.4rem;
@@ -100,22 +100,23 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
+  width: 100%;
 }
 
-.navbar {
+.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem 3.5rem;
   backdrop-filter: blur(18px);
 }
-.navbar__logo {
+.nav__logo {
   flex: 1;
 }
-.navbar__logo-img {
+.nav__logo-img {
   height: 2.4rem;
 }
-.navbar__menu {
+.nav__links {
   flex: 2;
   display: flex;
   justify-content: center;
@@ -123,28 +124,35 @@ body {
   margin: 0;
   padding: 0;
 }
-.navbar__menu-item {
-  padding-right: 2rem;
-  transition: ease-in-out 0.4s;
+.nav__links li {
+  padding: 0 1rem;
+  transition: ease-in-out 0.3s;
   cursor: pointer;
 }
-.navbar__menu-link {
+.nav__links a {
   color: rgba(255, 255, 255, 0.45);
   text-decoration: none;
   font-size: 1rem;
   transition: 0.4s;
 }
-.navbar__menu-link:hover {
+.nav__links a:hover {
   color: rgba(255, 255, 255, 0.85);
 }
-.navbar__contact {
+.nav__contact {
   flex: 1;
   display: flex;
   justify-content: flex-end;
 }
-.navbar__contact .navbar__contact-button {
+.nav__contact button {
   box-shadow: inset 0 0 0 0.6px rgba(255, 255, 255, 0.048);
 }
+.nav__contact a {
+  color: #FBE9BE;
+}
+.nav__contact button {
+  border: none;
+}
+
 .hero {
   display: flex;
   align-items: center;

@@ -23,24 +23,41 @@
     <!-- h e a d e r -->
     <header id="header">
         <!-- nav -->
-        <nav class="navbar">
-            <div class="navbar__logo">
-                <a href="#" class="navbar__logo-link">
-                    <img src="./img/logos/ados-logo.svg" alt="AdosLabs - logo" class="navbar__logo-img">
+        <nav class="nav">
+            <div class="nav__logo">
+                <a href="#">
+                    <img src="./img/logos/ados-logo.svg" alt="AdosLabs - logo" class="nav__logo-img">
                 </a>
             </div>
-            <!-- menu links -->
-            <ul class="navbar__menu">
-                <li class="navbar__menu-item"><a href="#" class="navbar__menu-link">Services</a></li>
-                <li class="navbar__menu-item"><a href="#" class="navbar__menu-link">How it works</a></li>
-                <li class="navbar__menu-item"><a href="#" class="navbar__menu-link">Plans</a></li>
-                <li class="navbar__menu-item"><a href="#" class="navbar__menu-link">FAQ</a></li>
-                <li class="navbar__menu-item"><a href="#" class="navbar__menu-link">Testimonials</a></li>
+            <!-- desktop -->
+            <ul class="nav__links nav__links--desktop">
+                <li><a href="#">Services</a></li>
+                <li><a href="#">How it works</a></li>
+                <li><a href="#">Plans</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Testimonials</a></li>
             </ul>
-            <!-- contact button -->
-            <div class="navbar__contact">
-                <a href="#" class="contact-button navbar__contact-button">Contact us</a>
+            <!-- contact-button -->
+            <div class="nav__contact nav__contact--desktop">
+                <button><a href="#">Contact us</a></button>
             </div>
+            <!-- mobile-close-button -->
+            <div class="mobile__menu" id="mobileMenu">
+                <button class="close" id="closeButton">
+                <i class="fas fa-times"></i>
+            </button>
+            <ul class="nav__links--mobile">
+                <li><a href="#">Services</a></li>
+                <li><a href="#">How it works</a></li>
+                <li><a href="#">Plans</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Testimonials</a></li>
+            </ul>
+            </div>
+            <!-- mobile-hamburger-button -->
+            <button class="hamburger" id="hamburgerButton">
+                <i class="fas fa-bars"></i>
+            </button>
         </nav>
     </header>
 
