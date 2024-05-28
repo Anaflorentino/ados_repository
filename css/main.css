@@ -427,6 +427,17 @@ body {
   border-radius: 12px;
   margin-bottom: 1rem;
 }
+.testimonials__cards .testimonial-card .testimonial-card__name p {
+  font-size: 0.8rem;
+  line-height: 0.8;
+  font-weight: 500;
+  color: #FBE9BE;
+}
+.testimonials__cards .testimonial-card .testimonial-card__name span {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.45);
+}
 .testimonials__cards .testimonial-card__info {
   margin-top: 1.5rem;
   display: flex;
@@ -436,18 +447,6 @@ body {
   height: 54px;
   margin-right: 1.2rem;
   border-radius: 50%; /* Torna a imagem circular */
-}
-
-.testimonial-card__name p {
-  font-size: 0.8rem;
-  line-height: 0.8;
-  font-weight: normal;
-  color: #FBE9BE;
-}
-.testimonial-card__name span {
-  font-size: 0.8rem;
-  font-weight: light;
-  color: rgba(255, 255, 255, 0.45);
 }
 
 .contact {

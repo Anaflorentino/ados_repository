@@ -40,6 +40,21 @@
         @extend %p-text;
       }
 
+      .testimonial-card__name {
+        p {
+          font-size: 0.8rem;
+          line-height: 0.8;
+          font-weight: 500;
+          color: variables.$text-special-color;
+        }
+      
+        span {
+          font-size: 0.8rem;
+          font-weight: 300;
+          color: variables.$text-off-white45-color;
+        }
+      }
+
       &__info {
         margin-top: 1.5rem;
         display: flex;
@@ -55,17 +70,4 @@
   }
 }
 
-.testimonial-card__name {
-  p {
-    font-size: 0.8rem;
-    line-height: 0.8;
-    font-weight: normal;
-    color: variables.$text-special-color;
-  }
 
-  span {
-    font-size: 0.8rem;
-    font-weight: light;
-    color: variables.$text-off-white45-color;
-  }
-}
