@@ -9,6 +9,8 @@
 }
 
 .faq {
+    max-width: 1250px;
+    margin: 0 auto;
     &__header {
         flex: 0 0 25%;
         position: -webkit-sticky; /* Para navegadores mais antigos */
@@ -21,6 +23,7 @@
         }
         p {
             @extend %subtitle-text;
+            padding-bottom: 1.2rem;
         }
     }
     &__accordion {

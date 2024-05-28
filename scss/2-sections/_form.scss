@@ -2,7 +2,11 @@
 @use '../3-components/components.scss';
 
 .contact {
+
     @extend %section-spacer;
+    max-width: 1250px;
+    margin: 6rem auto;
+
     display: flex;
     justify-content: space-between;
     &__header {

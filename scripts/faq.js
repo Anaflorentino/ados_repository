@@ -1,3 +1,4 @@
+// FAQ Accordian
 var accordion = document.getElementsByClassName("faq__question");
 var i;
 
