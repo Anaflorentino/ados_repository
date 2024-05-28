@@ -113,7 +113,7 @@ body {
   flex: 1;
 }
 .navbar__logo-img {
-  height: 2.4rem; /* Maintain aspect ratio */
+  height: 2.4rem;
 }
 .navbar__menu {
   flex: 2;
@@ -277,6 +277,9 @@ body {
   position: sticky;
   top: 116px;
   z-index: 0;
+}
+.faq__header p {
+  padding-bottom: 1.2rem;
 }
 .faq__accordion {
   flex: 0 0 75%;
