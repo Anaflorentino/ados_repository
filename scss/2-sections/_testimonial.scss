@@ -2,6 +2,10 @@
 @use '../1-base/variables';
 
 .testimonials {
+
+  max-width: 1250px;
+  margin: 0 auto;
+
   &__container {
     @extend %section-spacer;
   }

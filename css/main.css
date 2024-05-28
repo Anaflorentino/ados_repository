@@ -7,11 +7,7 @@
   text-decoration: none;
 }
 
-.container {
-  padding: 0 3.5rem;
-}
-
-.contact__header h2, .testimonials__header h2, .hiw__text h2 {
+.contact__header h2, .testimonials__header h2, .hiw__text h2, .services__container .services__text h2 {
   background: linear-gradient(to right, rgba(124, 112, 255, 0.9529411765) 40%, #F678FF 60%);
   color: transparent;
   -webkit-background-clip: text;
@@ -42,7 +38,7 @@ footer, .trusted, .navbar {
   border-radius: 12px;
 }
 
-footer, .contact, .testimonials__container, .faq__container, .hiw__container, .hero {
+footer, .contact, .testimonials__container, .faq__container, .hiw__container, .services__container, .hero {
   margin: 6rem 0;
 }
 
@@ -53,12 +49,12 @@ body {
   font-size: 1rem;
 }
 
-.testimonials__header h2, .faq__header h2, .hiw__text h2, .contact__header h2 {
+.testimonials__header h2, .faq__header h2, .hiw__text h2, .services__container .services__text h2, .contact__header h2 {
   font-size: 3rem;
   font-weight: 700;
 }
 
-.testimonials__header h3, .faq__header p, .hiw__text, .trusted__brands p {
+.testimonials__header h3, .faq__header p, .hiw__text, .services__container .services__text, .trusted__brands p {
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.85);
   font-weight: 300;
@@ -151,6 +147,7 @@ body {
 }
 .hero__content {
   width: 100%;
+  max-width: 1250px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -224,6 +221,8 @@ body {
 
 .hiw__container {
   padding: 2rem;
+  max-width: 1250px;
+  margin: 0 auto;
 }
 
 .hiw__text {
@@ -238,11 +237,13 @@ body {
 }
 
 .hiw__cards__item {
-  height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   text-align: center;
   padding: 3.5rem 2.8rem;
   background-color: #2c2c2c;
-  width: 29%;
+  width: 100%;
   box-sizing: border-box;
   border-radius: 16px;
 }
@@ -250,19 +251,142 @@ body {
   height: 400px;
 }
 .hiw__cards__item .card__animation {
-  height: 94px;
   width: 100%;
 }
 .hiw__cards__item h3 {
   font-size: 1.8rem;
   color: rgba(255, 255, 255, 0.85);
   line-height: 1.2;
-  margin-bottom: 0.5rem;
-  margin-top: 1rem;
 }
 .hiw__cards__item p {
-  margin-bottom: 2rem;
   color: rgba(255, 255, 255, 0.45);
+}
+.hiw__cards__item .hiw__animation {
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+  height: 8rem;
+}
+
+.services__container {
+  padding: 2rem;
+  max-width: 1250px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.services__container .services__text {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.services__container .services__navbar {
+  width: 100%;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: space-around;
+  position: sticky;
+  top: 6rem;
+  background-color: #1E1E1E;
+  z-index: 10;
+}
+.services__container .services__navbar h4 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  opacity: 0.8;
+}
+.services__container .services__navbar .wrapper__services__bar-progress {
+  position: absolute;
+  bottom: 0;
+  height: 0.5rem;
+  width: 100%;
+}
+.services__container .services__navbar .services__bar-progress {
+  width: 0;
+  height: 0.5rem;
+  background-color: pink;
+}
+.services__container .services__content {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  margin: 8rem auto 0 auto;
+}
+.services__container .services__content .services__left, .services__container .services__content .services__right {
+  display: flex;
+  width: 45%;
+}
+.services__container .services__content .services__left {
+  display: flex;
+  flex-direction: column;
+}
+.services__container .services__content .services__left .services__item {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  gap: 1.5rem;
+}
+.services__container .services__content .services__left .services__item img {
+  max-width: 4rem;
+  height: fit-content;
+  max-height: 4rem;
+}
+.services__container .services__content .services__left .services__item .content {
+  width: 100%;
+  gap: 0.75rem;
+  display: flex;
+  flex-direction: column;
+}
+.services__container .services__content .services__left .services__item .content h2 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+.services__container .services__content .services__left .services__item .content h3 {
+  font-size: 1.5rem;
+  font-weight: 100;
+  opacity: 0.8;
+}
+.services__container .services__content .services__left .services__item .content p {
+  font-weight: 300;
+  opacity: 0.8;
+}
+.services__container .services__content .services__left .services__item .content button {
+  background-color: rgba(255, 255, 255, 0.03);
+  color: #FBE9BE;
+  border-radius: 0.6rem;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.services__container .services__content .services__left .services__item .content button:hover {
+  background-color: rgba(31, 31, 31, 0.4196078431);
+}
+.services__container .services__content .services__right {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.services__container .services__content .services__right .service__animation {
+  width: 100%;
+  position: absolute;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+}
+.services__container .services__content .services__right #animacaoStep1, .services__container .services__content .services__right #animacaoStep2, .services__container .services__content .services__right #animacaoStep3 {
+  height: auto;
+  opacity: 0;
+}
+.services__container .services__content .services__right #animacaoStep1 {
+  opacity: 1;
 }
 
 .faq__container {
@@ -271,6 +395,10 @@ body {
   align-items: flex-start;
 }
 
+.faq {
+  max-width: 1250px;
+  margin: 0 auto;
+}
 .faq__header {
   flex: 0 0 25%;
   position: -webkit-sticky; /* Para navegadores mais antigos */
@@ -329,6 +457,10 @@ body {
   rotate: 180deg;
 }
 
+.testimonials {
+  max-width: 1250px;
+  margin: 0 auto;
+}
 .testimonials__header {
   margin-bottom: 2rem;
   text-align: center;
@@ -369,6 +501,8 @@ body {
 }
 
 .contact {
+  max-width: 1250px;
+  margin: 6rem auto;
   display: flex;
   justify-content: space-between;
 }
