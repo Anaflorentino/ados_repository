@@ -81,6 +81,137 @@ body {
   height: 1rem;
 }
 
+.header {
+  width: 100%;
+  margin: 0 auto;
+  position: sticky;
+  width: 100%;
+  margin-bottom: 48px;
+  z-index: 100;
+  top: 0;
+  border-bottom: solid 1px;
+  border-image: linear-gradient(to right, #1e1e1e, #2C2C2C, #1e1e1e) 1;
+  background: rgba(30, 30, 30, 0.75);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: 10px;
+}
+
+/* Navbar-desktop */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 24px 24px;
+}
+
+.nav img {
+  height: 36px;
+}
+
+.nav__links {
+  display: flex;
+  font-weight: 400;
+}
+
+.nav__links-item a {
+  margin: 0 16px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.45);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav__links-item a:hover {
+  color: #fff;
+  transition: ease-in-out 0.4s;
+}
+
+.nav__btn {
+  color: #FBE9BE;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #1E1E1E, #1E1E1E) padding-box, linear-gradient(-225deg, rgba(83, 83, 83, 0.2392156863), rgba(44, 44, 44, 0.1215686275)) border-box;
+  border-color: transparent;
+  transition: ease-in 0.4s;
+  cursor: pointer;
+}
+
+.nav__btn:hover {
+  background: linear-gradient(90deg, #1E1E1E, #1E1E1E) padding-box, linear-gradient(80deg, rgba(119, 119, 119, 0.2588235294), rgba(87, 87, 87, 0.062745098)) border-box;
+}
+
+.button-header p {
+  margin-left: 12px;
+}
+
+/* Sidebar--mobile-tablet */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 80%;
+  z-index: 999;
+  padding-right: 16px;
+  padding-top: 32px;
+  gap: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  background-color: #1E1E1E;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.menu-button {
+  display: none;
+}
+
+.sidebar {
+  display: none;
+  opacity: 0;
+}
+
+.sidebar.show {
+  display: flex;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    opacity: 0;
+  }
+  .menu-button {
+    display: none;
+  }
+  .sidebar.show {
+    display: flex;
+    opacity: 1;
+  }
+  .header {
+    margin-bottom: 24px;
+  }
+  .hideOnMobile {
+    display: none;
+  }
+  .menu-button {
+    display: flex;
+  }
+  .nav__links-item a:hover {
+    margin: 0 16px;
+  }
+}
+@media (min-width: 649px) and (max-width: 1024px) {
+  .header {
+    margin-bottom: 32px;
+  }
+}
 .hero {
   display: flex;
   align-items: center;
