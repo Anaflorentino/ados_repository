@@ -111,15 +111,18 @@
                         padding: .8rem 1.5rem;
                         border: none;
                         cursor: pointer;
-                        transition: .3s;
                         display: flex;
                         width: fit-content;
                         align-items: center;
                         gap: 1rem;
                         margin-top: 1rem;
-            
+
+
                         &:hover {
                             background-color: #1f1f1f6b;
+                            span {
+                                margin-left: .6rem;
+                            }
                         }
                     }
                 }

@@ -713,7 +713,6 @@ footer h4 {
   padding: 0.8rem 1.5rem;
   border: none;
   cursor: pointer;
-  transition: 0.3s;
   display: flex;
   width: fit-content;
   align-items: center;
@@ -722,6 +721,9 @@ footer h4 {
 }
 .services__container .services__content .services__left .services__item .content button:hover {
   background-color: rgba(31, 31, 31, 0.4196078431);
+}
+.services__container .services__content .services__left .services__item .content button:hover span {
+  margin-left: 0.6rem;
 }
 .services__container .services__content .services__right {
   display: flex;
