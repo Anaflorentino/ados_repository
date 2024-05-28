@@ -2,14 +2,15 @@
 @use '../1-base/_styles';
 
 .services__container {
-    @extend %section-spacer;
     padding: 2rem;
+    margin-top: 4rem;
     max-width: 1250px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
 
     .services__text {
+        margin: 6rem 0;
         @extend %subtitle-text;
         text-align: center;
         margin-bottom: 2rem;
@@ -17,6 +18,10 @@
         h2 {
             @extend %title-text;
             @extend %text-gradient;
+        }
+        p {
+            font-size: 1.8rem;
+            font-weight: bold;
         }
     }
 
@@ -98,12 +103,13 @@
                     p {
                         font-weight: 300;
                         opacity: .8;
+                        margin-bottom: .8rem;
                     }
 
-                    .price {
+                    .plan {
                         display: flex;
                         align-items: center;
-                        gap: 1rem; // Ajuste o espaçamento conforme necessário
+                        gap: 1.6rem; 
 
                         .cta-button {
                             background-color: rgba($color: #ffffff, $alpha: 0.03);
@@ -117,6 +123,7 @@
                             display: flex;
                             align-items: center;
                             gap: 1rem;
+                            transition: .3s;
 
                             &:hover {
                                 background-color: #1f1f1f6b;
@@ -127,9 +134,13 @@
                             }
                         }
 
-                        .price-text {
+                        .plan-text {
                             font-size: 1rem;
-                            color: variables.$text-off-white45-color;
+                            color: variables.$text-off-white85-color;
+                            &:hover {
+                                cursor: pointer;
+                                color: variables.$text-white-color;
+                            }
                         }
                     }
                 }
