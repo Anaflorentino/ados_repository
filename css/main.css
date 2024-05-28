@@ -727,12 +727,13 @@ footer h4 {
   display: flex;
   align-items: center;
   gap: 1rem;
-  transition: 0.3s;
+  transition: background-color 0.2s ease;
 }
 .services__container .services__content .services__left .services__item .content .plan .cta-button:hover {
   background-color: rgba(31, 31, 31, 0.4196078431);
 }
 .services__container .services__content .services__left .services__item .content .plan .cta-button:hover span {
+  transition: margin-left 0.2s ease;
   margin-left: 0.6rem;
 }
 .services__container .services__content .services__left .services__item .content .plan .plan-text {
