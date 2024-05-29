@@ -7,7 +7,7 @@
   text-decoration: none;
 }
 
-.services__container .services__text h2, .contact__header h2, .testimonials__header h2, .hiw__text h2 {
+.plans__title h3, .services__container .services__text h2, .contact__header h2, .testimonials__header h2, .hiw__text h2 {
   background: linear-gradient(to right, rgba(124, 112, 255, 0.9529411765) 40%, #F678FF 60%);
   color: transparent;
   -webkit-background-clip: text;
@@ -49,12 +49,12 @@ body {
   font-size: 1rem;
 }
 
-.services__container .services__text h2, .testimonials__header h2, .faq__header h2, .hiw__text h2, .contact__header h2 {
+.plans__title h3, .services__container .services__text h2, .testimonials__header h2, .faq__header h2, .hiw__text h2, .contact__header h2 {
   font-size: 3rem;
   font-weight: 700;
 }
 
-.services__container .services__text, .testimonials__header h3, .faq__header p, .hiw__text, .trusted__brands p {
+.plans__title h4, .services__container .services__text, .testimonials__header h3, .faq__header p, .hiw__text, .trusted__brands p {
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.85);
   font-weight: 300;
@@ -765,6 +765,126 @@ footer h4 {
 }
 .services__container .services__content .services__right #animacaoStep1 {
   opacity: 1;
+}
+
+.plans {
+  margin: 6rem 4rem;
+}
+.plans__title {
+  text-align: center;
+}
+.plans__title h2 {
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+.plans__title h4 {
+  line-height: 1.6;
+}
+
+.plans__cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+.plans__cards__item {
+  display: block;
+  padding: 2.4rem 2rem;
+  background-color: rgb(26, 26, 26);
+  width: 33%;
+  border-radius: 14px;
+}
+.plans__cards__item h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: rgba(124, 112, 255, 0.9529411765);
+  margin-bottom: 0.6rem;
+}
+.plans__cards__item p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+.plans__cards__item .prices h3 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 1rem;
+}
+.plans__cards__item h3 span {
+  color: #fff;
+  font-weight: 400;
+  align-items: center;
+}
+.plans__cards__item h3 .dollar {
+  font-size: 1.4rem;
+}
+.plans__cards__item h3 .price {
+  font-size: 2.6rem;
+  font-weight: 600;
+}
+.plans__cards__item h3 .month {
+  color: rgba(255, 255, 255, 0.25);
+}
+.plans__cards li {
+  border-bottom: 0.2px solid rgba(255, 255, 255, 0.062);
+  color: rgba(255, 255, 255, 0.45);
+  padding-bottom: 22px;
+  font-weight: 300;
+  font-size: 1rem;
+  margin-bottom: 24px;
+}
+.plans__cards li i {
+  margin-right: 16px;
+}
+
+.gradient-text-button {
+  position: relative;
+  background-color: #222222;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  gap: 5px;
+  font-size: 1rem;
+  border-radius: 12px;
+  margin-bottom: 32px;
+}
+
+.gradient-text-button .text {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(to right, #7c70ff 30%, #F678FF 60%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+  text-fill-color: transparent;
+}
+
+.gradient-text-button::before {
+  content: attr(data-text); /* Exibe o texto */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #7c70ff 90%, #F678FF 16%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.material-symbols-outlined {
+  position: relative;
+  z-index: 1;
+  color: inherit; /* Mantém a cor do ícone */
 }
 
 /*# sourceMappingURL=main.css.map */
