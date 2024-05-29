@@ -31,16 +31,25 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+
     &__item {
         display: block;
         padding: 3rem 2rem;
         background-color: rgb(26, 26, 26);
         width: 30%;
         border-radius: 14px;
+        &:first-child h2 {
+            color: rgb(139, 114, 255);
+        }
+        &:nth-child(2) h2 {
+            color: rgb(167, 115, 252);
+        }
+        &:last-child {
+            color: rgb(231, 120, 255);
+        }
         h2 {
             font-size: 2rem;
             font-weight: 400;
-            color: #7c70fff3;
             margin-bottom: .6rem;
         }
         p {
@@ -95,7 +104,7 @@
            
         }
         .gradient-icon {
-            background: linear-gradient(to right, #7c70ff 35%, #F678FF 80%);
+            background: linear-gradient(to right, rgb(139, 114, 255), rgb(167, 115, 252), rgb(220, 92, 248));
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -109,7 +118,7 @@
         background-color: #222222;
         border: none;
         cursor: pointer;
-        padding: 10px 20px;
+        padding: 9px 20px;
         display: inline-flex;
         justify-content: center;
         width: 100%;
@@ -128,7 +137,7 @@
     .gradient-text-button .text {
         position: relative;
         z-index: 1;
-        background: linear-gradient(to right, #7c70ff 30%, #F678FF 60%);
+        background: linear-gradient(to right, rgb(139, 114, 255), rgb(167, 115, 252), rgb(231, 120, 255));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -143,7 +152,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(to right, #7c70ff 64%, #F678FF 26%);
+        background: linear-gradient(to right, rgb(139, 114, 255), rgb(167, 115, 252), rgb(231, 120, 255));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -155,6 +164,6 @@
     .material-symbols-outlined {
         position: relative;
         z-index: 1;
-       color: #F678FF;
+       color: rgb(231, 120, 255);
     }
     

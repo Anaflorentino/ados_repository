@@ -799,10 +799,18 @@ footer h4 {
   width: 30%;
   border-radius: 14px;
 }
+.plans__cards__item:first-child h2 {
+  color: rgb(139, 114, 255);
+}
+.plans__cards__item:nth-child(2) h2 {
+  color: rgb(167, 115, 252);
+}
+.plans__cards__item:last-child {
+  color: rgb(231, 120, 255);
+}
 .plans__cards__item h2 {
   font-size: 2rem;
   font-weight: 400;
-  color: rgba(124, 112, 255, 0.9529411765);
   margin-bottom: 0.6rem;
 }
 .plans__cards__item p {
@@ -847,7 +855,7 @@ footer h4 {
   line-height: 1.8;
 }
 .plans__cards li .gradient-icon {
-  background: linear-gradient(to right, #7c70ff 35%, #F678FF 80%);
+  background: linear-gradient(to right, rgb(139, 114, 255), rgb(167, 115, 252), rgb(220, 92, 248));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -859,7 +867,7 @@ footer h4 {
   background-color: #222222;
   border: none;
   cursor: pointer;
-  padding: 10px 20px;
+  padding: 9px 20px;
   display: inline-flex;
   justify-content: center;
   width: 100%;
@@ -878,7 +886,7 @@ footer h4 {
 .gradient-text-button .text {
   position: relative;
   z-index: 1;
-  background: linear-gradient(to right, #7c70ff 30%, #F678FF 60%);
+  background: linear-gradient(to right, rgb(139, 114, 255), rgb(167, 115, 252), rgb(231, 120, 255));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -893,7 +901,7 @@ footer h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, #7c70ff 64%, #F678FF 26%);
+  background: linear-gradient(to right, rgb(139, 114, 255), rgb(167, 115, 252), rgb(231, 120, 255));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -905,7 +913,7 @@ footer h4 {
 .material-symbols-outlined {
   position: relative;
   z-index: 1;
-  color: #F678FF;
+  color: rgb(231, 120, 255);
 }
 
 /*# sourceMappingURL=main.css.map */
