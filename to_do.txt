@@ -2,8 +2,8 @@ AdosLabs
 
 To-do:
 
-* suavizar a transição gerais!!!;
 * tornar as sections responsivas para dispositivos menores;
+* suavizar a transição gerais!!!;
 * criar bordas suaves para os cards
 
 ---------------------------------------------------------
