@@ -49,6 +49,10 @@ body {
   font-size: 1rem;
 }
 
+div {
+  border: 1px solid tomato;
+}
+
 .services__container .services__text h2, .testimonials__header h2, .faq__header h2, .hiw__text h2, .contact__header h2 {
   font-size: 3rem;
   font-weight: 700;
@@ -103,7 +107,8 @@ body {
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 24px 24px;
+  padding: 24px 48px;
+  width: 100%;
 }
 
 .nav img {
@@ -117,7 +122,7 @@ body {
 
 .nav__links-item a {
   margin: 0 16px;
-  font-size: 16px;
+  font-size: 1rem;
   color: rgba(255, 255, 255, 0.45);
   text-decoration: none;
   transition: 0.3s;
@@ -131,7 +136,7 @@ body {
 .nav__btn {
   color: #FBE9BE;
   padding: 12px 24px;
-  font-size: 16px;
+  font-size: 1rem;
   border-width: 1px;
   border-style: solid;
   border-radius: 10px;
@@ -184,6 +189,9 @@ body {
 }
 
 @media (max-width: 768px) {
+  .nav {
+    padding: 24px 24px;
+  }
   .sidebar {
     opacity: 0;
   }
