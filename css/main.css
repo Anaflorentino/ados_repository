@@ -768,7 +768,7 @@ footer h4 {
 }
 
 .plans {
-  margin: 4rem 4rem;
+  margin: 6rem 2rem;
 }
 .plans__title {
   text-align: center;
@@ -787,14 +787,16 @@ footer h4 {
 }
 
 .plans__cards {
+  gap: 16px;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 .plans__cards__item {
   display: block;
-  padding: 2.4rem 2rem;
+  padding: 3rem 2rem;
   background-color: rgb(26, 26, 26);
-  width: 33%;
+  width: 30%;
   border-radius: 14px;
 }
 .plans__cards__item h2 {
@@ -820,6 +822,7 @@ footer h4 {
   color: #fff;
   font-weight: 400;
   align-items: center;
+  font-size: 1rem;
 }
 .plans__cards__item h3 .dollar {
   font-size: 1.4rem;
@@ -844,7 +847,7 @@ footer h4 {
   line-height: 1.8;
 }
 .plans__cards li .gradient-icon {
-  background: linear-gradient(to right, #7c70ff 18%, #F678FF 85%);
+  background: linear-gradient(to right, #7c70ff 35%, #F678FF 80%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -861,11 +864,11 @@ footer h4 {
   justify-content: center;
   width: 100%;
   align-items: center;
-  gap: 5px;
+  gap: 8px;
   font-size: 1rem;
   border-radius: 12px;
   margin-bottom: 32px;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 .gradient-text-button:hover {
   background-color: rgb(26, 26, 26);

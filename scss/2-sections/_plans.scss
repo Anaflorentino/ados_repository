@@ -2,7 +2,7 @@
 @use '../1-base/_styles';
 
 .plans {
-    margin: 4rem 4rem;
+    margin: 6rem 2rem;
     &__title {
         text-align: center;
         margin-bottom: 4rem;
@@ -27,13 +27,15 @@
 }
 
 .plans__cards {
+    gap: 16px;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     &__item {
         display: block;
-        padding: 2.4rem 2rem;
+        padding: 3rem 2rem;
         background-color: rgb(26, 26, 26);
-        width: 33%;
+        width: 30%;
         border-radius: 14px;
         h2 {
             font-size: 2rem;
@@ -62,6 +64,7 @@
             color: variables.$text-white-color;
             font-weight: 400;
             align-items: center;
+            font-size: 1rem;
         
         }
         .dollar {
@@ -92,7 +95,7 @@
            
         }
         .gradient-icon {
-            background: linear-gradient(to right, #7c70ff 18%, #F678FF 85%);
+            background: linear-gradient(to right, #7c70ff 35%, #F678FF 80%);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -111,11 +114,11 @@
         justify-content: center;
         width: 100%;
         align-items: center;
-        gap: 5px; 
+        gap: 8px; 
         font-size: 1rem; 
         border-radius: 12px;
         margin-bottom: 32px;
-        transition: .3s;
+        transition: .2s;
         &:hover {
             background-color: rgb(26, 26, 26);
             gap: 16px;
