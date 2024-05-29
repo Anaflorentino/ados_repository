@@ -9,6 +9,10 @@
     display: flex;
     flex-direction: column;
 
+    .icon {
+        color: variables.$text-special-color;
+    }
+
     .services__text {
         margin: 6rem 0;
         @extend %subtitle-text;
