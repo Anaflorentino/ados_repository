@@ -26,7 +26,7 @@
   transition: background-size 0.5s ease;
 }
 
-.hero__text-cta {
+.services__container .services__navbar .services__bar-progress, .hero__text-cta {
   background: linear-gradient(90deg, rgba(124, 112, 255, 0.9529411765) 0%, #F678FF 100%);
 }
 
@@ -47,10 +47,6 @@ body {
   background-color: #1E1E1E;
   color: #fff;
   font-size: 1rem;
-}
-
-div {
-  border: 1px solid tomato;
 }
 
 .services__container .services__text h2, .testimonials__header h2, .faq__header h2, .hiw__text h2, .contact__header h2 {
@@ -670,7 +666,6 @@ footer h4 {
 .services__container .services__navbar .services__bar-progress {
   width: 0;
   height: 0.5rem;
-  background-color: pink;
 }
 .services__container .services__content {
   min-height: 100vh;

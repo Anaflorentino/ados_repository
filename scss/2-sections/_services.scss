@@ -51,7 +51,7 @@
         .services__bar-progress {
             width: 0;
             height: .5rem;
-            background-color: pink;
+            @extend %btn-gradient;
         }
     }
 
