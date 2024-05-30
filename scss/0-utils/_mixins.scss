@@ -1,21 +1,18 @@
-// _mixins.scss
+// Breakpoints 
+
 @mixin respond-to($breakpoint) {
-    @if $breakpoint == 'small' {
-      @media (max-width: 600px) {
-        @content;
-      }
-    } @else if $breakpoint == 'medium' {
-      @media (max-width: 900px) {
-        @content;
-      }
-    } @else if $breakpoint == 'large' {
-      @media (max-width: 1200px) {
-        @content;
-      }
-    } @else if $breakpoint == 'xlarge' {
-      @media (max-width: 1500px) {
-        @content;
-      }
+  // verifica se o breakpoint é 'mobile'
+  @if $breakpoint == 'mobile' {
+    // se for mobile, aplica os estilos para tela de até 540px
+    @media (max-width: 540px) {
+      @content; // conteúdo aqui
     }
   }
-  
+
+  // se não for mobile, verifica se o breakpoint é 'tablet'
+  @else if $breakpoint == 'tablet' {
+    @media (max-width: 920px) {
+      @content;
+    }
+  }
+}
