@@ -3,14 +3,14 @@ AdosLabs
 To-do:
 
 * tornar as sections responsivas para dispositivos menores;
-* suavizar a transição dos gradientes nos títulos que ficam à esquerda;
+* suavizar a transição gerais!!!;
 * criar bordas suaves para os cards
-* criar página de plans;
 
 ---------------------------------------------------------
 
 Done:
 
+* criar página de plans;
 * último accordion do Faq não deve conter padding bottom (por conta do position sticky do title - fica entranho);
 * tornar nav responsiva
 * function para fechar o accordion da FAQ section;
