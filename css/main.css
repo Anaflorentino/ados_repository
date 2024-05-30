@@ -649,7 +649,7 @@ body {
   border-radius: 10px;
   padding: 24px;
   align-self: flex-start;
-  min-width: 50%;
+  min-width: 580px;
   max-width: 50%;
   order: 2;
   min-height: 500px;
@@ -813,11 +813,6 @@ body {
   .contact .form button {
     width: 100%;
     margin-top: 1rem;
-  }
-}
-@media (min-width: 1042px) and (max-width: 1082px) {
-  .contact .form button {
-    font-size: 0.8rem;
   }
 }
 .contact .form button:hover {

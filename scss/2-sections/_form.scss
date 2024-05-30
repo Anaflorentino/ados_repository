@@ -61,7 +61,7 @@
         border-radius: 10px;
         padding: 24px;
         align-self: flex-start;
-        min-width: 50%;
+        min-width: 580px;
         max-width: 50%;
         order: 2;
         min-height: 500px;
@@ -258,10 +258,6 @@
             @include mixins.respond-to('mobile') {
                 width: 100%;
                 margin-top: 1rem;
-            }
-
-            @include mixins.respond-to-range(1042px, 1082px) {
-                font-size: .8rem;
             }
 
             &:hover {

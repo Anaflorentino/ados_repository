@@ -1,0 +1,47 @@
+Git
+---------------------------------------------------------------------------
+Iniciando:
+
+git clone 'link do repositório'               //para clonar o repositório na máquina
+git init                                     //para inicializar um git na márquina
+git pull -u origin main                     // para puxar as ultimas atualizações da branch main
+git banch -b sua_branch                    //para criar uma nova branch a partir da main e trabalhar nela
+
+
+-u => está crianco um vínculo com o repositório do github (só precisa utilizar na primeira vez)
+
+
+Commits:
+
+git branch                                 //para checar a branch em que vc está
+git status                                // checar o estado dos arquivos
+git add *                                // adiciona todos os arquivos pro stage
+git commit -m "seu commit"              // commita as alterações adicionadas ao stage
+git push -u origin sua_branch          //envia a branch para o repositório no github
+-------------------------------------------------------------------------
+
+Merge de branches:
+git checkout branch_que_irá_receber_o_merge ****NUNCA fazer isso na main durante o desenvolvimento****
+git merge branch_que_será_mesclada_com_a_atual
+
+Exemplo: Você está em uma branch 'form_feature' e quer trazer as mudanças para a branch 'develop'
+git add *
+git commit "adicionando mudanças antes de fazer o merge"
+git checkout develop //mudando para a branch que receberá o merge
+git merge form_feature //fazendo o merge da branch form_feature para a branch atualizações
+
+
+
+Trabalhando com Sass
+Aqui está um guia passo-a-passo para trabalhar com um projeto que utiliza Sass.
+
+1. Instale o Sass
+$  npm install -g sass
+
+2. Compilando
+$ sass scss/main.scss:css/main.css      //compila o scss em css.
+
+---
+
+
+
