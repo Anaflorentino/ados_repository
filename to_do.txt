@@ -2,13 +2,21 @@ AdosLabs
 
 To-do:
 
-* tornar as sections responsivas para dispositivos menores;
+* tornar as sections responsivas para dispositivos menores:
+* Hero (responsiva)
+*Trusted by (responsiva)
+
 * suavizar a transição gerais!!!;
 * criar bordas suaves para os cards
 
 ---------------------------------------------------------
 
 Done:
+
++ Testimonial (responsiva);
++ FAQ (responsiva);
++ Contact (responsiva para mobile **falta tablet);
++ Header (responsivo)
 
 * criar página de plans;
 * último accordion do Faq não deve conter padding bottom (por conta do position sticky do title - fica entranho);
