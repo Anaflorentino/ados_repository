@@ -324,6 +324,12 @@ body {
   margin-bottom: 3rem;
   text-align: center;
 }
+.trusted__brands .views {
+  font-size: 2.6rem;
+  color: #FBE9BE;
+  text-transform: uppercase;
+  font-weight: 600;
+}
 @media (max-width: 600px) {
   .trusted__brands {
     margin-bottom: 2rem;
@@ -919,12 +925,12 @@ footer h4 {
   align-items: center;
   gap: 1.6rem;
 }
-.services__container .services__content .services__left .services__item .content .plan .cta-button {
+.services__container .services__content .services__left .services__item .content .plan a.cta-button {
   background-color: rgba(255, 255, 255, 0.03);
   color: #FBE9BE;
   border-radius: 0.6rem;
-  font-size: 1rem;
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 1.2rem;
   padding: 0.8rem 1.5rem;
   border: none;
   cursor: pointer;
@@ -933,10 +939,10 @@ footer h4 {
   gap: 1rem;
   transition: background-color 0.2s ease;
 }
-.services__container .services__content .services__left .services__item .content .plan .cta-button:hover {
+.services__container .services__content .services__left .services__item .content .plan a.cta-button:hover {
   background-color: rgba(31, 31, 31, 0.4196078431);
 }
-.services__container .services__content .services__left .services__item .content .plan .cta-button:hover span {
+.services__container .services__content .services__left .services__item .content .plan a.cta-button:hover span {
   transition: margin-left 0.2s ease;
   margin-left: 0.6rem;
 }
