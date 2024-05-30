@@ -1,5 +1,6 @@
 @use '../1-base/_variables';
 @use '../3-components/components.scss';
+@use '../0-utils/mixins';
 
 .header {
     width: 100%;
@@ -15,6 +16,11 @@
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
     border-radius: 10px;
+
+    
+    @include mixins.respond-to('mobile') {
+      margin-bottom: 2rem;
+      }
   }
   
   /* Navbar-desktop */

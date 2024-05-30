@@ -1,5 +1,6 @@
 @use '../1-base/variables';
 @use '../1-base/styles';
+@use '../0-utils/mixins';
 
 .trusted {
     display: flex;
@@ -7,14 +8,24 @@
     align-items: center;
     border-bottom: 1px solid;
     @extend %border-bottom-gradient;
+   
+    
   
     &__brands {
       margin-bottom: 3rem; 
       text-align: center;  
+
+      @include mixins.respond-to('mobile') {
+        margin-bottom: 2rem;
+        }
       p {
         @extend %subtitle-text;
-        margin-bottom: 1rem;
+        margin-bottom: 0;
         color: variables.$text-off-white85-color;
+
+        @include mixins.respond-to('mobile') {
+          font-size: 0.8rem;
+          }
       }
   
       ul {
@@ -28,12 +39,22 @@
           font-weight: 300;
           text-transform: uppercase;
           letter-spacing: 2px;
+
+          @include mixins.respond-to('mobile') {
+            margin: 1rem 0.2rem;
+            font-size: 14px;
+            letter-spacing: 0.4px;
+            }
         }
   
         img {
           height: 46px;
           opacity: 80%; 
           width: auto;
+
+          @include mixins.respond-to('mobile') {
+           height: 20px;
+           }
         }
       }
     }

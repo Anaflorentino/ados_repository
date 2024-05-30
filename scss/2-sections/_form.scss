@@ -21,6 +21,12 @@
         position: sticky;
         top: 116px;
         z-index: 99999;
+        margin-right: 24px;
+
+        @include mixins.respond-to('mobile') {
+            position: static;
+         
+          }
 
       
 

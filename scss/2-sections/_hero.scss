@@ -1,6 +1,7 @@
 @use '../1-base/variables';
 @use '../1-base/styles';
 @use '../3-components/components.scss';
+@use '../0-utils/mixins';
 
 .hero {
     @extend %section-spacer;
@@ -62,6 +63,55 @@
         &-frame {
             max-width: 100%;
             border-radius: 1rem;
+        }
+    }
+
+    // Estilos específicos para dispositivos móveis
+    @include mixins.respond-to('mobile') {
+        margin: 0;
+        flex-direction: column-reverse; // Inverte a direção dos elementos
+        align-items: stretch; // Estica os itens horizontalmente
+
+        &__content {
+            flex-wrap: wrap; // Quebra a linha para os itens ocuparem toda a largura
+            margin-bottom: 2rem;
+        }
+
+        &__text,
+        &__video {
+            width: 100%; // Define a largura para 100%
+            max-width: none; // Remove a largura máxima
+            margin-bottom: 1rem;
+            order: unset; // Reseta a ordem
+        }
+
+       
+
+        &__text {
+            
+            order: 2; // Define a ordem do texto para aparecer depois do vídeo
+            &-cta {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+               
+            }
+            &-title {
+                font-size: 2.5rem;
+                margin-bottom: 1.6rem;
+            }
+            &-subtitle {
+                font-size: 1.2rem;
+            }
+    
+           
+        }
+
+        &__video {
+            order: 1; // Define a ordem do vídeo para aparecer antes do texto
+            margin-top: 1rem;
+            margin-bottom: 2rem;
         }
     }
 }

@@ -1,6 +1,7 @@
 @use '../1-base/_variables';
 @use '../1-base/_styles';
 @use '../3-components/components.scss';
+@use '../0-utils/mixins';
 
 
 .hiw__container {
@@ -26,16 +27,24 @@
     justify-content: center; 
     align-items: center;
     gap: 2rem; 
+
+    @include mixins.respond-to('mobile') {
+       flex-direction: column;
+       width: 100%;
+      }
 }
 
 .hiw__cards__item {
     &--height {
-        height: 400px;
+        height: 384px;
+
     }
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    
 
     .card__animation {
         width: 100%;
@@ -44,15 +53,22 @@
         font-size: 1.8rem;
         color: variables.$text-off-white85-color; 
         line-height: 1.2;
+
+        @include mixins.respond-to('mobile') {
+            font-size: 1.4rem;
+           }
     }
     p {
         color: variables.$text-off-white45-color; 
+        @include mixins.respond-to('mobile') {
+            font-size: 1rem;
+           }
     }
     .hiw__animation {
         display: flex;
         align-items: center;
         justify-content: baseline;
-        height: 6.5rem;
+        height: 5.8rem;
     }
 
     text-align: center;
