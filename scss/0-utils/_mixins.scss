@@ -11,8 +11,15 @@
 
   // se não for mobile, verifica se o breakpoint é 'tablet'
   @else if $breakpoint == 'tablet' {
-    @media (max-width: 920px) {
+    @media (max-width: 894px) {
       @content;
     }
+  }
+}
+
+// Mixin de range:
+@mixin respond-to-range($from, $to) {
+  @media (min-width: $from) and (max-width: $to) {
+    @content;
   }
 }
