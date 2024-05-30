@@ -49,6 +49,15 @@ body {
   font-size: 1rem;
 }
 
+.container {
+  margin: 0 2rem;
+}
+@media (max-width: 600px) {
+  .container {
+    margin: 0 1.2rem;
+  }
+}
+
 .plans__title h3, .services__container .services__text h2, .testimonials__header h2, .faq__header h2, .hiw__text h2, .contact__header h2 {
   font-size: 3rem;
   font-weight: 700;
@@ -348,10 +357,21 @@ body {
   justify-content: space-between;
   align-items: flex-start;
 }
+@media (max-width: 600px) {
+  .faq__container {
+    display: block;
+    margin: 0 1rem;
+  }
+}
 
 .faq {
   max-width: 1250px;
   margin: 0 auto;
+}
+@media (max-width: 600px) {
+  .faq {
+    width: 100%;
+  }
 }
 .faq__header {
   flex: 0 0 25%;
@@ -360,11 +380,28 @@ body {
   top: 116px;
   z-index: 0;
 }
+@media (max-width: 600px) {
+  .faq__header {
+    display: block;
+    margin: 0 1rem;
+    position: static;
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .faq__header h2 {
+    background: linear-gradient(to right, rgba(124, 112, 255, 0.9529411765) 40%, #F678FF 60%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
 .faq__header p {
   padding-bottom: 1.2rem;
 }
 .faq__accordion {
-  flex: 0 0 75%;
+  flex: 0 0 70%;
   display: block;
   width: 100%;
 }
@@ -392,10 +429,14 @@ body {
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   transition: 0.4s;
+  display: flex;
+  line-height: 1;
+  justify-content: space-between;
+  align-items: start;
 }
 .faq__question i {
-  float: right;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
+  margin-left: 1rem;
 }
 .faq__answer {
   padding: 0rem 2rem 2rem 2rem;

@@ -1,33 +1,68 @@
 @use '../1-base/_variables';
-@use '../1-base/styles';
+@use '../1-base/_styles';
+@use '../0-utils/_mixins';
 
 .faq__container {
     @extend %section-spacer;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+
+    // mobile
+    @include mixins.respond-to('mobile') {
+        display: block;
+        margin: 0 1rem;
+    }
+
 }
 
 .faq {
     max-width: 1250px;
     margin: 0 auto;
+
+    // mobile
+    @include mixins.respond-to('mobile') {
+        width: 100%;
+    }
     &__header {
         flex: 0 0 25%;
         position: -webkit-sticky; /* Para navegadores mais antigos */
         position: sticky;
         top: 116px;
         z-index: 0;
+
+    // mobile
+    @include mixins.respond-to('mobile') {
+        display: block;
+        margin: 0 1rem;
+        position: static;
+        text-align: center;
+    }
+
         h2 {
             @extend %text-left-gradient;
             @extend %title-text;
+
+    // mobile
+    @include mixins.respond-to('mobile') {
+        background: linear-gradient(to right, variables.$gradient-primary 40%, variables.$gradient-secondary 60%);
+        color: transparent; 
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;    
+    }
+
+            
         }
         p {
             @extend %subtitle-text;
             padding-bottom: 1.2rem;
         }
+
+    
     }
     &__accordion {
-        flex: 0 0 75%;
+        flex: 0 0 70%;
         display: block;
         width: 100%;
         &__item {
@@ -55,9 +90,13 @@
         border-top-left-radius: 12px;
         border-top-right-radius: 12px;
         transition: .4s;
+        display: flex;
+        line-height: 1;
+        justify-content: space-between;
+        align-items: start;
         i {
-            float: right;
-            font-size: .7rem;
+            font-size: .8rem;
+            margin-left: 1rem;
             
         }
     }

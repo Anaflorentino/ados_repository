@@ -4,7 +4,7 @@
   // verifica se o breakpoint é 'mobile'
   @if $breakpoint == 'mobile' {
     // se for mobile, aplica os estilos para tela de até 540px
-    @media (max-width: 540px) {
+    @media (max-width: 600px) {
       @content; // conteúdo aqui
     }
   }
