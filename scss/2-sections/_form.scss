@@ -1,19 +1,17 @@
 @use '../1-base/_variables';
-@use '../3-components/components.scss';
 @use '../0-utils/mixins';
+@use '../3-components/components.scss';
 
 .contact {
-
     @extend %section-spacer;
     max-width: 1250px;
     margin: 6rem auto;
-
     display: flex;
     justify-content: space-between;
 
     // mobile
     @include mixins.respond-to('mobile') {
-        display: block
+        display: block;
     }
 
     &__header {
@@ -25,21 +23,20 @@
 
         @include mixins.respond-to('mobile') {
             position: static;
-         
-          }
-
-      
+        }
 
         h2 {
             @extend %text-gradient;
             @extend %title-text;
             margin-bottom: 2rem;
             line-height: 1.3;
-             // mobile
-    @include mixins.respond-to('mobile') {
-       margin-bottom: .5rem;
-    }
+            
+            // mobile
+            @include mixins.respond-to('mobile') {
+                margin-bottom: .5rem;
+            }
         }
+
         h3 {
             font-size: 2rem;
             line-height: 1;
@@ -47,9 +44,11 @@
             margin-bottom: .4rem;
             color: variables.$text-off-white85-color;
         }
+
         span, i {
             color: variables.$text-off-white45-color;
         }
+
         i {
             margin-right: .1rem;
         }
@@ -70,12 +69,12 @@
         flex-grow: 1;
         height: max-content;
 
-    // mobile
-    @include mixins.respond-to('mobile') {
-        width: 100%;
-        min-width: 100%;
-        margin-top: 2rem;
-    }
+        // mobile
+        @include mixins.respond-to('mobile') {
+            width: 100%;
+            min-width: 100%;
+            margin-top: 2rem;
+        }
 
         &__title {
             font-size: 1rem;
@@ -90,18 +89,58 @@
             justify-content: space-between;
             margin-bottom: .2rem;
 
-    // mobile
-    @include mixins.respond-to('mobile') {
-       display: block;
-    }
+            // mobile
+            @include mixins.respond-to('mobile') {
+                display: block;
+            }
 
             .form__group {
                 width: 48%;
 
-    // mobile
-    @include mixins.respond-to('mobile') {
-       width: 100%;
-     }
+                // mobile
+                @include mixins.respond-to('mobile') {
+                    width: 100%;
+                }
+
+                select {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    background: variables.$card-bg-color;
+                    color: variables.$text-off-white45-color;
+                    border: 1px solid variables.$text-off-white45-color;
+                    border-radius: 8px;
+                    padding: 0.8rem;
+                    font-size: 0.9rem;
+                    font-weight: 400;
+                    transition: 0.2s;
+                    position: relative;
+                    cursor: pointer;
+
+
+                    &:hover,
+                    &:focus {
+                        background: variables.$card-bg-color;
+                        border-color: variables.$text-off-white85-color;
+                    }
+
+                    &:focus {
+                        outline: none;
+                    }
+
+                    option {
+                        color: variables.$text-off-white85-color;
+                        background: variables.$card-bg-color;
+                        border: none;
+                        border-radius: 0;
+                        padding: 0.8rem;
+
+                        &:hover,
+                        &:focus {
+                            background: lighten(variables.$card-bg-color, 10%);
+                        }
+                    }
+                }
             }
         }
 
@@ -112,8 +151,9 @@
             &-services {
                 @include mixins.respond-to('mobile') {
                     margin-top: 1rem;
-                  }
+                }
             }
+
             &-socials {
                 margin-top: 1rem;
             }
@@ -142,7 +182,7 @@
                 background: linear-gradient(90deg, #2B2B2B, #2B2B2B) padding-box, 
                             linear-gradient(-225deg, #535353, #2C2C2C) border-box;
                 border-color: transparent; 
-                transition: .5s;
+                transition: .2s;
 
                 &:hover,
                 &:focus {
@@ -164,6 +204,8 @@
             border-radius: 0;
             margin-bottom: 0;
             padding: .6rem;
+            width: 92%;
+
             &:hover,
             &:focus {
                 background: transparent;
@@ -176,20 +218,18 @@
             width: 100%;
             align-items: center;
             margin-top: 1rem;
-              // mobile
-        @include mixins.respond-to('mobile') {
-            display: block;
+
+            // mobile
+            @include mixins.respond-to('mobile') {
+                display: block;
             }
 
             p {
-                
-             // mobile
-        @include mixins.respond-to('mobile') {
-            font-size: .7rem;
-
+                // mobile
+                @include mixins.respond-to('mobile') {
+                    font-size: .7rem;
+                }
             }
-        
-      }
         }
 
         #policy {
@@ -212,13 +252,13 @@
             padding: .8rem 1.5rem;
             border: none;
             cursor: pointer;
-            transition: .3s;
+            transition: .2s;
 
-        // mobile
-        @include mixins.respond-to('mobile') {
-            width: 100%;
-            margin-top: 1rem;
-          }
+            // mobile
+            @include mixins.respond-to('mobile') {
+                width: 100%;
+                margin-top: 1rem;
+            }
 
             @include mixins.respond-to-range(1042px, 1082px) {
                 font-size: .8rem;
@@ -248,4 +288,19 @@
 .input-container {
     border-bottom: 1px solid #363636;
     margin-bottom: 0.2rem;
+    display: inline-block;
+    transition: .2s;
+    &:focus-within {
+        border-bottom: 1px solid transparent;
+        border-image:  linear-gradient(90deg, rgb(111, 100, 255) 0%, rgb(178, 106, 255) 50%, rgb(248, 118, 255) 100%);
+        border-image-slice: 1;
+      }
+
+      &:hover {
+        border-bottom: 1px solid #646464;
+      } 
+
 }
+
+
+

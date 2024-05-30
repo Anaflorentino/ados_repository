@@ -689,6 +689,38 @@ body {
     width: 100%;
   }
 }
+.contact .form .form__row .form__group select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #2B2B2B;
+  color: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 8px;
+  padding: 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  transition: 0.2s;
+  position: relative;
+  cursor: pointer;
+}
+.contact .form .form__row .form__group select:hover, .contact .form .form__row .form__group select:focus {
+  background: #2B2B2B;
+  border-color: rgba(255, 255, 255, 0.85);
+}
+.contact .form .form__row .form__group select:focus {
+  outline: none;
+}
+.contact .form .form__row .form__group select option {
+  color: rgba(255, 255, 255, 0.85);
+  background: #2B2B2B;
+  border: none;
+  border-radius: 0;
+  padding: 0.8rem;
+}
+.contact .form .form__row .form__group select option:hover, .contact .form .form__row .form__group select option:focus {
+  background: #454545;
+}
 .contact .form__group {
   display: flex;
   flex-direction: column;
@@ -720,7 +752,7 @@ body {
   border-radius: 8px;
   background: linear-gradient(90deg, #2B2B2B, #2B2B2B) padding-box, linear-gradient(-225deg, #535353, #2C2C2C) border-box;
   border-color: transparent;
-  transition: 0.5s;
+  transition: 0.2s;
 }
 .contact .form__group input:hover, .contact .form__group input:focus, .contact .form__group select:hover, .contact .form__group select:focus, .contact .form__group textarea:hover, .contact .form__group textarea:focus {
   background: linear-gradient(90deg, #363636, #363636) padding-box, linear-gradient(-225deg, #535353, #2C2C2C) border-box;
@@ -735,6 +767,7 @@ body {
   border-radius: 0;
   margin-bottom: 0;
   padding: 0.6rem;
+  width: 92%;
 }
 .contact .form #social-1:hover, .contact .form #social-1:focus, .contact .form #social-2:hover, .contact .form #social-2:focus, .contact .form #social-3:hover, .contact .form #social-3:focus {
   background: transparent;
@@ -774,7 +807,7 @@ body {
   padding: 0.8rem 1.5rem;
   border: none;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 @media (max-width: 600px) {
   .contact .form button {
@@ -808,6 +841,16 @@ body {
 .input-container {
   border-bottom: 1px solid #363636;
   margin-bottom: 0.2rem;
+  display: inline-block;
+  transition: 0.2s;
+}
+.input-container:focus-within {
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(90deg, rgb(111, 100, 255) 0%, rgb(178, 106, 255) 50%, rgb(248, 118, 255) 100%);
+  border-image-slice: 1;
+}
+.input-container:hover {
+  border-bottom: 1px solid #646464;
 }
 
 footer {
