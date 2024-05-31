@@ -426,6 +426,11 @@ body {
   max-width: 1250px;
   margin: 0 auto;
 }
+@media (max-width: 599px) {
+  .hiw__container {
+    padding: 0;
+  }
+}
 
 .hiw__text {
   text-align: center;
@@ -436,6 +441,12 @@ body {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+}
+@media (max-width: 599px) {
+  .hiw__cards {
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
 .hiw__cards__item {
@@ -453,6 +464,11 @@ body {
 .hiw__cards__item--height {
   min-width: 303px;
 }
+@media (max-width: 599px) {
+  .hiw__cards__item--height {
+    height: fit-content;
+  }
+}
 .hiw__cards__item .card__animation {
   width: 100%;
 }
@@ -461,8 +477,20 @@ body {
   color: rgba(255, 255, 255, 0.85);
   line-height: 1.2;
 }
+@media (max-width: 599px) {
+  .hiw__cards__item h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+    justify-content: center;
+  }
+}
 .hiw__cards__item p {
   color: rgba(255, 255, 255, 0.45);
+}
+@media (max-width: 599px) {
+  .hiw__cards__item p {
+    font-size: 1rem;
+  }
 }
 .hiw__cards__item .hiw__animation {
   display: flex;
@@ -475,6 +503,18 @@ body {
 }
 .hiw__cards__item .hiw__animation.step2 {
   padding-left: 1rem;
+}
+@media (max-width: 599px) {
+  .hiw__cards__item .hiw__animation {
+    height: 5.6rem;
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 599px) {
+  .hiw__cards__item {
+    padding: 2.5rem 2.6rem;
+  }
 }
 
 @media only screen and (min-width: 602px) and (max-width: 980px) {
@@ -510,6 +550,11 @@ body {
 .hiw__cards__item--height {
   min-height: 380px;
   min-width: 303px;
+}
+@media (max-width: 599px) {
+  .hiw__cards__item--height {
+    min-height: fit-content;
+  }
 }
 @media only screen and (min-width: 602px) and (max-width: 900px) {
   .hiw__cards__item--height {
