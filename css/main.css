@@ -602,12 +602,23 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+@media (max-width: 599px) {
+  .testimonials__cards {
+    width: 100%;
+    display: block;
+  }
+}
 .testimonials__cards .testimonial-card {
   width: 49%;
   background-color: #2B2B2B;
   padding: 2rem;
   border-radius: 12px;
   margin-bottom: 1rem;
+}
+@media (max-width: 599px) {
+  .testimonials__cards .testimonial-card {
+    width: 100%;
+  }
 }
 @media (min-width: 580px) and (max-width: 796px) {
   .testimonials__cards .testimonial-card {

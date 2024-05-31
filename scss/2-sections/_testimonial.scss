@@ -30,8 +30,8 @@
     justify-content: space-between;
     flex-wrap: wrap;
 
-    // mobile
-    @include mixins.respond-to('mobile') {
+    // x-small
+    @include mixins.respond-to('x-small') {
       width: 100%;
       display: block;
   }
@@ -43,8 +43,8 @@
       border-radius: 12px;
       margin-bottom: 1rem;
 
-    // mobile
-    @include mixins.respond-to('mobile') {
+    // x-small
+    @include mixins.respond-to('x-small') {
       width: 100%;
     }
 
