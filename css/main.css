@@ -291,7 +291,7 @@ body {
     justify-content: center;
   }
   .hero__text-title {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     margin-bottom: 1.6rem;
   }
   .hero__text-subtitle {
@@ -330,13 +330,13 @@ body {
   text-align: center;
 }
 .trusted__brands .views {
-  font-size: 2.6rem;
+  font-size: 2.4rem;
   color: rgba(251, 233, 190, 0.7803921569);
   text-transform: uppercase;
   font-weight: 600;
 }
 .trusted__brands p {
-  margin-bottom: 0;
+  margin-bottom: 0.4rem;
   color: rgba(255, 255, 255, 0.85);
 }
 .trusted__brands ul {
@@ -346,17 +346,81 @@ body {
 .trusted__brands ul li {
   margin: 0 1rem;
   color: rgba(255, 255, 255, 0.45);
-  font-size: 36px;
+  font-size: 2rem;
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 .trusted__brands ul img {
-  height: 46px;
+  height: 2.8rem;
   opacity: 80%;
   width: auto;
 }
 
+@media (min-width: 364px) and (max-width: 495px) {
+  .trusted__brands .views {
+    font-size: 1.2rem;
+  }
+  .trusted__brands p {
+    margin-bottom: 1rem;
+  }
+  .trusted__brands ul li {
+    font-size: 0.9rem;
+    letter-spacing: 0;
+    margin: 0 0.2rem;
+  }
+  .trusted__brands ul li img {
+    height: 1.2rem;
+  }
+}
+@media (min-width: 496px) and (max-width: 568px) {
+  .trusted__brands .views {
+    font-size: 1.6rem;
+  }
+  .trusted__brands p {
+    margin-bottom: 1rem;
+  }
+  .trusted__brands ul li {
+    font-size: 1.2rem;
+    letter-spacing: 0;
+    margin: 0 0.2rem;
+  }
+  .trusted__brands ul li img {
+    height: 1.6rem;
+  }
+}
+@media (min-width: 496px) and (max-width: 789px) {
+  .trusted__brands .views {
+    font-size: 1.6rem;
+  }
+  .trusted__brands p {
+    margin-bottom: 1rem;
+  }
+  .trusted__brands ul li {
+    font-size: 1.2rem;
+    letter-spacing: 0;
+    margin: 0 0.2rem;
+  }
+  .trusted__brands ul li img {
+    height: 1.6rem;
+  }
+}
+@media (min-width: 790px) and (max-width: 1240px) {
+  .trusted__brands .views {
+    font-size: 1.8rem;
+  }
+  .trusted__brands p {
+    margin-bottom: 1rem;
+  }
+  .trusted__brands ul li {
+    font-size: 1.8rem;
+    letter-spacing: 0;
+    margin: 0 0.2rem;
+  }
+  .trusted__brands ul li img {
+    height: 2.4rem;
+  }
+}
 .hiw__container {
   padding: 2rem;
   max-width: 1250px;
