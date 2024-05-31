@@ -46,7 +46,7 @@
     }
   }
 
-  @include mixins.respond-to-range(364px, 495px) {
+  @include mixins.respond-to-range(360px, 495px) {
     .trusted {
         &__brands {
           .views {

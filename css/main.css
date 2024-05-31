@@ -357,7 +357,7 @@ body {
   width: auto;
 }
 
-@media (min-width: 364px) and (max-width: 495px) {
+@media (min-width: 360px) and (max-width: 495px) {
   .trusted__brands .views {
     font-size: 1.2rem;
   }
