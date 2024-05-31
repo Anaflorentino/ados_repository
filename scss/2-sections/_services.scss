@@ -1,5 +1,6 @@
 @use '../1-base/_variables';
 @use '../1-base/_styles';
+@use '../0-utils/mixins';
 
 .services__container {
     padding: 2rem;
@@ -22,6 +23,12 @@
         h2 {
             @extend %title-text;
             @extend %text-gradient;
+
+             // mobile
+     @include mixins.respond-to('mobile') {
+       font-size: 2.8rem;
+     }
+            
         }
         p {
             font-size: 1.8rem;

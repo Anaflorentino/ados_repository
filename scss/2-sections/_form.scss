@@ -34,6 +34,7 @@
             // mobile
             @include mixins.respond-to('mobile') {
                 margin-bottom: .5rem;
+                font-size: 2.8rem;
             }
         }
 

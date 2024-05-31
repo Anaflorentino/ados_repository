@@ -9,6 +9,11 @@
     padding: 2rem;
     max-width: 1250px;
     margin: 0 auto;
+
+     // mobile
+     @include mixins.respond-to('mobile') {
+       padding: 0
+    }
 }
 
 .hiw__text {
@@ -22,6 +27,7 @@
     }
 }
 
+
 .hiw__cards {
     display: flex; 
     justify-content: center; 
@@ -32,22 +38,26 @@
        flex-direction: column;
        width: 100%;
       }
-}
-
+    }
 .hiw__cards__item {
     &--height {
-        height: 384px;
-
+      
+        min-width: 303px;
+        
+        @include mixins.respond-to('mobile') {
+            height: fit-content;
+        }
     }
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    
+    align-items: center;
 
     .card__animation {
         width: 100%;
+
+        
     }
     h3 {
         font-size: 1.8rem;
@@ -56,19 +66,36 @@
 
         @include mixins.respond-to('mobile') {
             font-size: 1.4rem;
-           }
+            margin-bottom: 1.2rem;
+            justify-content: center;
+        }
     }
     p {
         color: variables.$text-off-white45-color; 
         @include mixins.respond-to('mobile') {
             font-size: 1rem;
-           }
+        }
     }
     .hiw__animation {
         display: flex;
         align-items: center;
         justify-content: baseline;
         height: 5.8rem;
+
+        &.step1  {
+            height: 5rem;
+        }
+        &.step2  {
+            padding-left: 1rem;
+        }
+      
+
+        // mobile
+        @include mixins.respond-to('mobile') {
+            height: 5.6rem;
+            margin-top: 2rem;
+            margin-bottom: 0;
+        }
     }
 
     text-align: center;
@@ -77,4 +104,60 @@
     width: 100%;
     box-sizing: border-box;
     border-radius: 16px;
+
+    @include mixins.respond-to('mobile') {
+       padding: 2.5rem 2.6rem;
+    }
+}
+
+@media only screen and (min-width: 602px) and (max-width: 980px) {
+    
+    .hiw__cards {
+        display: block;
+    }
+    
+    .hiw__cards__item {
+        flex-direction: row; // Altera a direção do flex para linha
+        align-items: center; // Alinha os itens ao centro verticalmente
+        justify-content: left; // Distribui os itens igualmente ao longo do eixo principal
+        margin-bottom: 2rem;
+        height: min-content;
+        flex-direction: row-reverse;
+
+        h3, p {
+            text-align: left; 
+        }
+
+        .hiw__animation {
+            height: 100%; 
+            
+            margin-bottom: 0; 
+            margin-right: 24px;
+        }
+
+       
+    }
+}
+
+.hiw__cards__item {
+    display: flex;
+    align-items: center;
+}
+
+
+.hiw__svg {
+    width: 50%; 
+}
+
+.hiw__cards__item--height {
+    min-height: 380px;
+    min-width: 303px;
+
+    @include mixins.respond-to('mobile') {
+        min-height: fit-content; 
+    }
+
+    @media only screen and (min-width: 602px) and (max-width: 900px) {
+        min-height: auto; 
+    }
 }

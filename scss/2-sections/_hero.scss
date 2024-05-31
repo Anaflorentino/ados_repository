@@ -13,7 +13,7 @@
         max-width: 1250px;
         margin: 0 auto;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-between;
     }
 
@@ -49,10 +49,6 @@
                 margin-left: .6rem;
                 height: 1rem; 
             }
-
-            // &:hover {
-            //    hover glow effect
-            // }
         }
     }
 
@@ -66,30 +62,28 @@
         }
     }
 
-    // Estilos específicos para dispositivos móveis
-    @include mixins.respond-to('mobile') {
+    // Mixins => small, medium screens
+    @include mixins.respond-to-range(340px, 799px) {
         margin: 0;
-        flex-direction: column-reverse; // Inverte a direção dos elementos
-        align-items: stretch; // Estica os itens horizontalmente
+        flex-direction: column-reverse;
+        align-items: stretch; 
 
         &__content {
-            flex-wrap: wrap; // Quebra a linha para os itens ocuparem toda a largura
+            flex-wrap: wrap; 
             margin-bottom: 2rem;
         }
 
         &__text,
         &__video {
-            width: 100%; // Define a largura para 100%
-            max-width: none; // Remove a largura máxima
+            width: 100%; 
+            max-width: none; 
             margin-bottom: 1rem;
-            order: unset; // Reseta a ordem
+            order: unset; 
         }
-
-       
 
         &__text {
             
-            order: 2; // Define a ordem do texto para aparecer depois do vídeo
+            order: 2;
             &-cta {
                 width: 100%;
                 display: flex;
@@ -103,15 +97,45 @@
             }
             &-subtitle {
                 font-size: 1.2rem;
-            }
-    
-           
+            }    
         }
 
         &__video {
-            order: 1; // Define a ordem do vídeo para aparecer antes do texto
+            order: 1;
             margin-top: 1rem;
             margin-bottom: 2rem;
+        }
+    }
+}
+
+// Regras específicas para o botão a partir de 677px
+@include mixins.respond-to-range(677px, 799px) {
+    .hero  {
+        // Sobrescreve o tamanho do botão a partir de 677px
+       &__text {
+        &-cta {
+            width: fit-content;
+        }
+       }
+    }
+}
+
+@include mixins.respond-to-range(800px, 923px) {
+    .hero {
+        &__text {
+            &-title {
+                font-size: 2.2rem;
+            }
+        }
+    }
+}
+
+@include mixins.respond-to-range(924px, 1138px) {
+    .hero {
+        &__text {
+            &-title {
+                font-size: 3.2rem;
+            }
         }
     }
 }

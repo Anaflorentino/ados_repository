@@ -1,25 +1,53 @@
-// Breakpoints 
-
+// Mixin => breakpoints
 @mixin respond-to($breakpoint) {
-  // verifica se o breakpoint é 'mobile'
-  @if $breakpoint == 'mobile' {
-    // se for mobile, aplica os estilos para tela de até 540px
-    @media (max-width: 600px) {
-      @content; // conteúdo aqui
-    }
-  }
-
-  // se não for mobile, verifica se o breakpoint é 'tablet'
-  @else if $breakpoint == 'tablet' {
-    @media (max-width: 894px) {
+  @if $breakpoint == 'x-small' {
+    @media (max-width: 599px) {
       @content;
     }
+  } @else if $breakpoint == 'small' {
+    @media (min-width: 600px) and (max-width: 799px) {
+      @content;
+    }
+  } @else if $breakpoint == 'x-medium' {
+    @media (min-width: 800px) and (max-width: 929px) {
+      @content;
+    }
+  } @else if $breakpoint == 'medium' {
+    @media (min-width: 930px) and (max-width: 997px) {
+      @content;
+    }
+  } @else if $breakpoint == 'large' {
+    @media (min-width: 998px) and (max-width: 1230px) {
+      @content;
+    }
+  } @else if $breakpoint == 'x-large' {
+    @media (min-width: 1300px) {
+      @content;
+    }
+
+    // warn!
+  } @else {
+    @warn "Unknown breakpoint: #{$breakpoint}";
   }
 }
 
-// Mixin de range:
+// Mixin para ranges específicos
 @mixin respond-to-range($from, $to) {
-  @media (min-width: $from) and (max-width: $to) {
-    @content;
+  @if $from != null and $to != null {
+    @media (min-width: #{$from}) and (max-width: #{$to}) {
+      @content;
+    }
+  } @else if $from != null {
+    @media (min-width: #{$from}) {
+      @content;
+    }
+  } @else if $to != null {
+    @media (max-width: #{$to}) {
+      @content;
+    }
+    
+    // warn!
+  } @else {
+    @warn "You must provide at least one breakpoint (from or to)";
   }
 }
