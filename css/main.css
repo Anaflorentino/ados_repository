@@ -642,6 +642,11 @@ body {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 599px) {
+  .contact {
+    display: block;
+  }
+}
 .contact__header {
   position: -webkit-sticky; /* Para navegadores Webkit */
   position: sticky;
@@ -649,9 +654,20 @@ body {
   z-index: 99999;
   margin-right: 24px;
 }
+@media (max-width: 599px) {
+  .contact__header {
+    position: static;
+  }
+}
 .contact__header h2 {
   margin-bottom: 2rem;
   line-height: 1.3;
+}
+@media (max-width: 599px) {
+  .contact__header h2 {
+    margin-bottom: 0.5rem;
+    font-size: 2.8rem;
+  }
 }
 .contact__header h3 {
   font-size: 2rem;
@@ -681,6 +697,13 @@ body {
   flex-grow: 1;
   height: max-content;
 }
+@media (max-width: 599px) {
+  .contact .form {
+    width: 100%;
+    min-width: 100%;
+    margin-top: 2rem;
+  }
+}
 .contact .form__title {
   font-size: 1rem;
   margin-bottom: 2rem;
@@ -693,8 +716,18 @@ body {
   justify-content: space-between;
   margin-bottom: 0.2rem;
 }
+@media (max-width: 599px) {
+  .contact .form .form__row {
+    display: block;
+  }
+}
 .contact .form .form__row .form__group {
   width: 48%;
+}
+@media (max-width: 599px) {
+  .contact .form .form__row .form__group {
+    width: 100%;
+  }
 }
 .contact .form .form__row .form__group select {
   -webkit-appearance: none;
@@ -731,6 +764,11 @@ body {
 .contact .form__group {
   display: flex;
   flex-direction: column;
+}
+@media (max-width: 599px) {
+  .contact .form__group-services {
+    margin-top: 1rem;
+  }
 }
 .contact .form__group-socials {
   margin-top: 1rem;
@@ -781,6 +819,16 @@ body {
   align-items: center;
   margin-top: 1rem;
 }
+@media (max-width: 599px) {
+  .contact .form #privacy {
+    display: block;
+  }
+}
+@media (max-width: 599px) {
+  .contact .form #privacy p {
+    font-size: 0.7rem;
+  }
+}
 .contact .form #policy {
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.45);
@@ -800,6 +848,12 @@ body {
   border: none;
   cursor: pointer;
   transition: 0.2s;
+}
+@media (max-width: 599px) {
+  .contact .form button {
+    width: 100%;
+    margin-top: 1rem;
+  }
 }
 .contact .form button:hover {
   background-color: rgba(31, 31, 31, 0.4196078431);

@@ -9,8 +9,8 @@
     display: flex;
     justify-content: space-between;
 
-    // mobile
-    @include mixins.respond-to('mobile') {
+    // x-small
+    @include mixins.respond-to('x-small') {
         display: block;
     }
 
@@ -21,7 +21,7 @@
         z-index: 99999;
         margin-right: 24px;
 
-        @include mixins.respond-to('mobile') {
+        @include mixins.respond-to('x-small') {
             position: static;
         }
 
@@ -31,8 +31,8 @@
             margin-bottom: 2rem;
             line-height: 1.3;
             
-            // mobile
-            @include mixins.respond-to('mobile') {
+            // x-small
+            @include mixins.respond-to('x-small') {
                 margin-bottom: .5rem;
                 font-size: 2.8rem;
             }
@@ -70,8 +70,8 @@
         flex-grow: 1;
         height: max-content;
 
-        // mobile
-        @include mixins.respond-to('mobile') {
+        // x-small
+        @include mixins.respond-to('x-small') {
             width: 100%;
             min-width: 100%;
             margin-top: 2rem;
@@ -90,16 +90,16 @@
             justify-content: space-between;
             margin-bottom: .2rem;
 
-            // mobile
-            @include mixins.respond-to('mobile') {
+            // x-small
+            @include mixins.respond-to('x-small') {
                 display: block;
             }
 
             .form__group {
                 width: 48%;
 
-                // mobile
-                @include mixins.respond-to('mobile') {
+                // x-small
+                @include mixins.respond-to('x-small') {
                     width: 100%;
                 }
 
@@ -150,7 +150,7 @@
             flex-direction: column;
 
             &-services {
-                @include mixins.respond-to('mobile') {
+                @include mixins.respond-to('x-small') {
                     margin-top: 1rem;
                 }
             }
@@ -220,14 +220,14 @@
             align-items: center;
             margin-top: 1rem;
 
-            // mobile
-            @include mixins.respond-to('mobile') {
+            // x-small
+            @include mixins.respond-to('x-small') {
                 display: block;
             }
 
             p {
-                // mobile
-                @include mixins.respond-to('mobile') {
+                // x-small
+                @include mixins.respond-to('x-small') {
                     font-size: .7rem;
                 }
             }
@@ -255,8 +255,8 @@
             cursor: pointer;
             transition: .2s;
 
-            // mobile
-            @include mixins.respond-to('mobile') {
+            // x-small
+            @include mixins.respond-to('x-small') {
                 width: 100%;
                 margin-top: 1rem;
             }
