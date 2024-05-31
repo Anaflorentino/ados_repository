@@ -1,21 +1,53 @@
-// _mixins.scss
+// Mixin => breakpoints
 @mixin respond-to($breakpoint) {
-    @if $breakpoint == 'small' {
-      @media (max-width: 600px) {
-        @content;
-      }
-    } @else if $breakpoint == 'medium' {
-      @media (max-width: 900px) {
-        @content;
-      }
-    } @else if $breakpoint == 'large' {
-      @media (max-width: 1200px) {
-        @content;
-      }
-    } @else if $breakpoint == 'xlarge' {
-      @media (max-width: 1500px) {
-        @content;
-      }
+  @if $breakpoint == 'x-small' {
+    @media (max-width: 599px) {
+      @content;
     }
+  } @else if $breakpoint == 'small' {
+    @media (min-width: 600px) and (max-width: 799px) {
+      @content;
+    }
+  } @else if $breakpoint == 'x-medium' {
+    @media (min-width: 800px) and (max-width: 929px) {
+      @content;
+    }
+  } @else if $breakpoint == 'medium' {
+    @media (min-width: 930px) and (max-width: 997px) {
+      @content;
+    }
+  } @else if $breakpoint == 'large' {
+    @media (min-width: 998px) and (max-width: 1230px) {
+      @content;
+    }
+  } @else if $breakpoint == 'x-large' {
+    @media (min-width: 1300px) {
+      @content;
+    }
+
+    // warn!
+  } @else {
+    @warn "Unknown breakpoint: #{$breakpoint}";
   }
-  
+}
+
+// Mixin para ranges específicos
+@mixin respond-to-range($from, $to) {
+  @if $from != null and $to != null {
+    @media (min-width: #{$from}) and (max-width: #{$to}) {
+      @content;
+    }
+  } @else if $from != null {
+    @media (min-width: #{$from}) {
+      @content;
+    }
+  } @else if $to != null {
+    @media (max-width: #{$to}) {
+      @content;
+    }
+    
+    // warn!
+  } @else {
+    @warn "You must provide at least one breakpoint (from or to)";
+  }
+}

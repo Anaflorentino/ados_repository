@@ -1,5 +1,6 @@
 @use '../1-base/styles';
 @use '../1-base/variables';
+@use '../0-utils/mixins';
 
 .testimonials {
 
@@ -28,6 +29,12 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    // x-small
+    @include mixins.respond-to('x-small') {
+      width: 100%;
+      display: block;
+  }
     
     .testimonial-card {
       width: 49%;
@@ -35,6 +42,16 @@
       padding: 2rem;
       border-radius: 12px;
       margin-bottom: 1rem;
+
+    // x-small
+    @include mixins.respond-to('x-small') {
+      width: 100%;
+    }
+
+    @include mixins.respond-to-range(580px, 796px) {
+      width: 100%;
+    }
+      
 
       p {
         @extend %p-text;
