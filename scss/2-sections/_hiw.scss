@@ -161,3 +161,14 @@
         min-height: auto; 
     }
 }
+
+
+@include mixins.respond-to('x-small') {
+    .services__right {
+        display: none;
+        }
+
+        .pin-spacer {
+            display: none;
+            }
+    }

@@ -24,8 +24,8 @@
             @extend %title-text;
             @extend %text-gradient;
 
-             // mobile
-     @include mixins.respond-to('mobile') {
+             // x-small
+     @include mixins.respond-to('x-small') {
        font-size: 2.8rem;
      }
             

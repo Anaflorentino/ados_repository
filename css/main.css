@@ -53,6 +53,11 @@ body {
   margin: 0 2rem;
 }
 
+@media (max-width: 599px) {
+  .container {
+    margin: 0 1rem;
+  }
+}
 .plans__title h3, .services__container .services__text h2, .testimonials__header h2, .faq__header h2, .hiw__text h2, .contact__header h2 {
   font-size: 3rem;
   font-weight: 700;
@@ -99,6 +104,11 @@ body {
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   border-radius: 10px;
+}
+@media (max-width: 599px) {
+  .header {
+    margin-bottom: 2rem;
+  }
 }
 
 /* Navbar-desktop */
@@ -188,7 +198,7 @@ body {
   opacity: 1;
 }
 
-@media (max-width: 870px) {
+@media (max-width: 768px) {
   .nav {
     padding: 24px 24px;
   }
@@ -562,6 +572,14 @@ body {
   }
 }
 
+@media (max-width: 599px) {
+  .services__right {
+    display: none;
+  }
+  .pin-spacer {
+    display: none;
+  }
+}
 .faq__container {
   display: flex;
   justify-content: space-between;
@@ -736,7 +754,7 @@ body {
   }
 }
 .contact__header {
-  position: -webkit-sticky; /* Para navegadores Webkit */
+  position: -webkit-sticky;
   position: sticky;
   top: 116px;
   z-index: 99999;
@@ -976,6 +994,36 @@ body {
   border-bottom: 1px solid #646464;
 }
 
+@media (min-width: 600px) and (max-width: 996px) {
+  .contact {
+    display: block;
+    margin: 0;
+    margin-top: 6rem;
+  }
+  .contact .form {
+    margin-left: 0;
+  }
+  .contact__header {
+    text-align: left;
+    margin-bottom: 2rem;
+    position: static;
+  }
+  .contact__header h2 {
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    width: 64%;
+  }
+  .contact__header h3 {
+    text-align: justify;
+  }
+  .contact .form .form__row {
+    margin-bottom: 0.4rem;
+  }
+  .contact .form__group input, .contact .form__group select, .contact .form__group textarea {
+    margin-bottom: 1rem;
+    margin-bottom: 0.2rem;
+  }
+}
 footer {
   display: flex;
   flex-direction: column;
@@ -1010,6 +1058,11 @@ footer h4 {
   margin: 6rem 0;
   text-align: center;
   margin-bottom: 2rem;
+}
+@media (max-width: 599px) {
+  .services__container .services__text h2 {
+    font-size: 2.8rem;
+  }
 }
 .services__container .services__text p {
   font-size: 1.8rem;
