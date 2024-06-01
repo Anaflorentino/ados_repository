@@ -994,6 +994,18 @@ body {
   border-bottom: 1px solid #646464;
 }
 
+.service-1 > input:nth-child(1) {
+  margin-right: 4px;
+}
+
+.service-2 > input:nth-child(1) {
+  margin-right: 4px;
+}
+
+.service-3 > input:nth-child(1) {
+  margin-right: 4px;
+}
+
 @media (min-width: 600px) and (max-width: 996px) {
   .contact {
     display: block;
