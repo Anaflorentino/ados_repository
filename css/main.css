@@ -335,15 +335,25 @@ body {
   align-items: center;
   border-bottom: 1px solid;
 }
+.trusted__results {
+  margin-bottom: 3rem;
+}
+.trusted__results ul {
+  display: flex;
+  justify-content: center;
+}
+.trusted__results ul li {
+  margin: 0 1rem;
+  color: #FBE9BE;
+  font-size: 2rem;
+  font-weight: 600;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+}
 .trusted__brands {
   margin-bottom: 3rem;
   text-align: center;
-}
-.trusted__brands .views {
-  font-size: 2.4rem;
-  color: rgba(251, 233, 190, 0.7803921569);
-  text-transform: uppercase;
-  font-weight: 600;
 }
 .trusted__brands p {
   margin-bottom: 0.4rem;
@@ -368,67 +378,19 @@ body {
 }
 
 @media (min-width: 360px) and (max-width: 495px) {
-  .trusted__brands .views {
+  .trusted__results .views {
     font-size: 1.2rem;
   }
-  .trusted__brands p {
+  .trusted__results p {
     margin-bottom: 1rem;
   }
-  .trusted__brands ul li {
+  .trusted__results ul li {
     font-size: 0.9rem;
     letter-spacing: 0;
     margin: 0 0.2rem;
   }
-  .trusted__brands ul li img {
+  .trusted__results ul li img {
     height: 1.2rem;
-  }
-}
-@media (min-width: 496px) and (max-width: 568px) {
-  .trusted__brands .views {
-    font-size: 1.6rem;
-  }
-  .trusted__brands p {
-    margin-bottom: 1rem;
-  }
-  .trusted__brands ul li {
-    font-size: 1.2rem;
-    letter-spacing: 0;
-    margin: 0 0.2rem;
-  }
-  .trusted__brands ul li img {
-    height: 1.6rem;
-  }
-}
-@media (min-width: 496px) and (max-width: 789px) {
-  .trusted__brands .views {
-    font-size: 1.6rem;
-  }
-  .trusted__brands p {
-    margin-bottom: 1rem;
-  }
-  .trusted__brands ul li {
-    font-size: 1.2rem;
-    letter-spacing: 0;
-    margin: 0 0.2rem;
-  }
-  .trusted__brands ul li img {
-    height: 1.6rem;
-  }
-}
-@media (min-width: 790px) and (max-width: 1240px) {
-  .trusted__brands .views {
-    font-size: 1.8rem;
-  }
-  .trusted__brands p {
-    margin-bottom: 1rem;
-  }
-  .trusted__brands ul li {
-    font-size: 1.8rem;
-    letter-spacing: 0;
-    margin: 0 0.2rem;
-  }
-  .trusted__brands ul li img {
-    height: 2.4rem;
   }
 }
 .hiw__container {

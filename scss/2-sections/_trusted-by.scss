@@ -8,16 +8,30 @@
     align-items: center;
     border-bottom: 1px solid;
     @extend %border-bottom-gradient;
+    
+    &__results {
+      margin-bottom: 3rem;
+  
+      ul {
+        display: flex;
+        justify-content: center;
+  
+        li {
+          margin: 0 1rem;
+          color: variables.$text-special-color;
+          font-size: 2rem;
+          font-weight: 600;
+          opacity: .8;
+          text-transform: uppercase;
+          letter-spacing: 1.4px;
+        }
+  }
+}
   
     &__brands {
       margin-bottom: 3rem; 
       text-align: center;  
-      .views   {
-        font-size: 2.4rem;
-        color: #FBE9BEC7;
-        text-transform: uppercase;
-        font-weight: 600;
-      }       
+           
       p {
         @extend %subtitle-text;
         margin-bottom: .4rem;
@@ -48,7 +62,7 @@
 
   @include mixins.respond-to-range(360px, 495px) {
     .trusted {
-        &__brands {
+        &__results {
           .views {
             font-size: 1.2rem;
           }
@@ -71,71 +85,14 @@
 
 
 @include mixins.respond-to-range(496px, 568px) {
-  .trusted {
-      &__brands {
-        .views {
-          font-size: 1.6rem;
-        }
-        p {
-          margin-bottom: 1rem;
-        }
-        ul {
-          li {
-            font-size: 1.2rem;
-            letter-spacing: 0;
-            margin: 0 .2rem;
-            img {
-              height: 1.6rem;
-            }
-          }
-        }
-      }
-  }
+ 
 }
 
 @include mixins.respond-to-range(496px, 789px) {
-  .trusted {
-      &__brands {
-        .views {
-          font-size: 1.6rem;
-        }
-        p {
-          margin-bottom: 1rem;
-        }
-        ul {
-          li {
-            font-size: 1.2rem;
-            letter-spacing: 0;
-            margin: 0 .2rem;
-            img {
-              height: 1.6rem;
-            }
-          }
-        }
-      }
-  }
+
 }
 
 
 @include mixins.respond-to-range(790px, 1240px) {
-  .trusted {
-      &__brands {
-        .views {
-          font-size: 1.8rem;
-        }
-        p {
-          margin-bottom: 1rem;
-        }
-        ul {
-          li {
-            font-size: 1.8rem;
-            letter-spacing: 0;
-            margin: 0 .2rem;
-            img {
-              height: 2.4rem;
-            }
-          }
-        }
-      }
-  }
+
 }
