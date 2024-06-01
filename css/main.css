@@ -514,7 +514,7 @@ body {
     min-height: fit-content;
   }
 }
-@media only screen and (min-width: 602px) and (max-width: 900px) {
+@media only screen and (min-width: 602px) and (max-width: 980px) {
   .hiw__cards__item--height {
     min-height: auto;
   }
