@@ -15,9 +15,10 @@
       ul {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
   
         li {
-          margin: 0 1rem;
+          margin: 0 1.4rem;
           color: variables.$text-special-color;
           font-size: 2rem;
           font-weight: 600;
@@ -41,6 +42,7 @@
       ul {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
   
         li {
           margin: 0 1rem;
@@ -61,26 +63,7 @@
   }
 
   @include mixins.respond-to-range(360px, 495px) {
-    .trusted {
-        &__results {
-          .views {
-            font-size: 1.2rem;
-          }
-          p {
-            margin-bottom: 1rem;
-          }
-          ul {
-            li {
-              font-size: .9rem;
-              letter-spacing: 0;
-              margin: 0 .2rem;
-              img {
-                height: 1.2rem;
-              }
-            }
-          }
-        }
-    }
+  
 }
 
 
