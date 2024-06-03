@@ -19,7 +19,9 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-  
+        @include mixins.respond-to('x-small') {
+          text-align: center;
+        }
         li {
           margin: 0 1.4rem;
           color: variables.$text-special-color;
@@ -28,6 +30,11 @@
           opacity: .8;
           text-transform: uppercase;
           letter-spacing: 1.4px;
+
+          @include mixins.respond-to('x-small') {
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+          }
         }
   }
 }

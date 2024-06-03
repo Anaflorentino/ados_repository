@@ -348,6 +348,11 @@ body {
   justify-content: center;
   flex-wrap: wrap;
 }
+@media (max-width: 599px) {
+  .trusted__results ul {
+    text-align: center;
+  }
+}
 .trusted__results ul li {
   margin: 0 1.4rem;
   color: #FBE9BE;
@@ -356,6 +361,12 @@ body {
   opacity: 0.8;
   text-transform: uppercase;
   letter-spacing: 1.4px;
+}
+@media (max-width: 599px) {
+  .trusted__results ul li {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
 }
 .trusted__brands {
   margin-bottom: 3rem;
@@ -596,6 +607,11 @@ body {
 .faq__accordion__item:hover, .faq__accordion__item.active {
   cursor: pointer;
   background-color: #353535;
+}
+@media (max-width: 599px) {
+  .faq__accordion__item:hover:hover, .faq__accordion__item.active:hover {
+    background-color: #2B2B2B;
+  }
 }
 .faq__question {
   width: 100%;
@@ -918,6 +934,11 @@ body {
 }
 .contact .form button:hover {
   background-color: rgba(31, 31, 31, 0.4196078431);
+}
+@media (max-width: 599px) {
+  .contact .form button:hover {
+    background-color: rgba(31, 31, 31, 0.9529411765);
+  }
 }
 
 .service-1 {

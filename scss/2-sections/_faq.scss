@@ -72,7 +72,13 @@
             &:hover, &.active {
                 cursor: pointer; 
                 background-color: lighten(variables.$card-bg-color, 4%);
-             }
+             
+            &:hover {
+                @include mixins.respond-to('x-small') {
+                    background-color: variables.$card-bg-color;
+                   }
+            }
+            }
         }
     }
     &__question {
