@@ -348,11 +348,6 @@ body {
   justify-content: center;
   flex-wrap: wrap;
 }
-@media (max-width: 599px) {
-  .trusted__results ul {
-    text-align: center;
-  }
-}
 .trusted__results ul li {
   margin: 0 1.4rem;
   color: #FBE9BE;
@@ -361,12 +356,6 @@ body {
   opacity: 0.8;
   text-transform: uppercase;
   letter-spacing: 1.4px;
-}
-@media (max-width: 599px) {
-  .trusted__results ul li {
-    font-size: 1.8rem;
-    letter-spacing: 1px;
-  }
 }
 .trusted__brands {
   margin-bottom: 3rem;
@@ -834,7 +823,7 @@ body {
 }
 .contact .form__group input, .contact .form__group select, .contact .form__group textarea {
   font-weight: 400;
-  padding: 0.9rem;
+  padding: 0.8rem;
   margin-bottom: 0.8rem;
   font-size: 0.9rem;
   border-width: 1px;
@@ -844,7 +833,6 @@ body {
   background: linear-gradient(90deg, #2B2B2B, #2B2B2B) padding-box, linear-gradient(-225deg, #535353, #2C2C2C) border-box;
   border-color: transparent;
   transition: 0.2s;
-  accent-color: rgb(111, 100, 255);
 }
 .contact .form__group input:hover, .contact .form__group input:focus, .contact .form__group select:hover, .contact .form__group select:focus, .contact .form__group textarea:hover, .contact .form__group textarea:focus {
   background: linear-gradient(90deg, #363636, #363636) padding-box, linear-gradient(-225deg, #535353, #2C2C2C) border-box;
@@ -909,11 +897,6 @@ body {
 }
 .contact .form button:hover {
   background-color: rgba(31, 31, 31, 0.4196078431);
-}
-@media (max-width: 599px) {
-  .contact .form button:hover {
-    background-color: rgba(31, 31, 31, 0.9529411765);
-  }
 }
 
 .service-1 {
@@ -983,6 +966,7 @@ body {
     margin-bottom: 0.4rem;
   }
   .contact .form__group input, .contact .form__group select, .contact .form__group textarea {
+    margin-bottom: 1rem;
     margin-bottom: 0.2rem;
   }
 }
@@ -1279,42 +1263,3 @@ footer h4 {
   margin-bottom: 32px;
   transition: 0.2s;
 }
-.gradient-text-button:hover {
-  background-color: rgb(26, 26, 26);
-  gap: 16px;
-}
-
-.gradient-text-button .text {
-  position: relative;
-  z-index: 1;
-  background: linear-gradient(to right, rgb(139, 114, 255), rgb(167, 115, 252), rgb(231, 120, 255));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 600;
-  text-fill-color: transparent;
-}
-
-.gradient-text-button::before {
-  content: attr(data-text); /* Exibe o texto */
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to right, rgb(139, 114, 255), rgb(167, 115, 252), rgb(231, 120, 255));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  opacity: 1;
-  pointer-events: none;
-}
-
-.material-symbols-outlined {
-  position: relative;
-  z-index: 1;
-  color: rgb(231, 120, 255);
-}
-
-/*# sourceMappingURL=main.css.map */

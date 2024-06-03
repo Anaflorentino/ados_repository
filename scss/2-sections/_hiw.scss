@@ -40,34 +40,25 @@
       }
     }
 .hiw__cards__item {
-    &--height {
-      
-        min-width: 303px;
-        
-        @include mixins.respond-to('x-small') {
-            height: fit-content;
-        }
-    }
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
 
-    .card__animation {
-        width: 100%;
-
-        
-    }
+    
     h3 {
         font-size: 1.8rem;
         color: variables.$text-off-white85-color; 
         line-height: 1.2;
 
+
         @include mixins.respond-to('x-small') {
             font-size: 1.4rem;
-            margin-bottom: 1.2rem;
+           
             justify-content: center;
+            width: 100%;
         }
     }
     p {
@@ -79,20 +70,10 @@
     .hiw__animation {
         display: flex;
         align-items: center;
-        justify-content: baseline;
-        height: 5.8rem;
-
-        &.step1  {
-            height: 5rem;
-        }
-        &.step2  {
-            padding-left: 1rem;
-        }
-      
-
+        height: 96px;
+       
         // x-small
         @include mixins.respond-to('x-small') {
-            height: 5.6rem;
             margin-top: 2rem;
             margin-bottom: 0;
         }
@@ -110,16 +91,16 @@
     }
 }
 
-@media only screen and (min-width: 602px) and (max-width: 980px) {
+@media only screen and (min-width: 501px) and (max-width: 980px) {
     
     .hiw__cards {
         display: block;
     }
     
     .hiw__cards__item {
-        flex-direction: row; // Altera a direção do flex para linha
-        align-items: center; // Alinha os itens ao centro verticalmente
-        justify-content: left; // Distribui os itens igualmente ao longo do eixo principal
+        flex-direction: row; 
+        align-items: center; 
+        justify-content: left; 
         margin-bottom: 2rem;
         height: min-content;
         flex-direction: row-reverse;
@@ -129,13 +110,9 @@
         }
 
         .hiw__animation {
-            height: 100%; 
-            
             margin-bottom: 0; 
             margin-right: 24px;
         }
-
-       
     }
 }
 
@@ -157,7 +134,18 @@
         min-height: fit-content; 
     }
 
-    @media only screen and (min-width: 602px) and (max-width: 900px) {
+    @media only screen and (min-width: 502px) and (max-width: 980px) {
         min-height: auto; 
     }
 }
+
+
+@include mixins.respond-to('x-small') {
+    .services__right {
+        display: none;
+        }
+
+        .pin-spacer {
+            display: none;
+            }
+    }

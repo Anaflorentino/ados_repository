@@ -24,8 +24,8 @@
             @extend %title-text;
             @extend %text-gradient;
 
-             // mobile
-     @include mixins.respond-to('mobile') {
+             // x-small
+     @include mixins.respond-to('x-small') {
        font-size: 2.8rem;
      }
             
@@ -83,7 +83,7 @@
             flex-direction: column;
 
             .services__item {
-                height: 50vh; // TIRAR DEPOIS
+                height: 62vh; // TIRAR DEPOIS
                 width: 100%;
                 display: flex;
                 gap: 1.5rem;

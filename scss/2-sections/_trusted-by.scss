@@ -7,10 +7,37 @@
     align-items: center;
     border-bottom: 1px solid;
     @extend %border-bottom-gradient;
+    
+    &__results {
+      margin-bottom: 3rem;
+      @include mixins.respond-to('x-small') {
+       display: block;
+      }
+  
+      ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+  
+        li {
+          margin: 0 1.4rem;
+          color: variables.$text-special-color;
+          font-size: 2rem;
+          font-weight: 600;
+          opacity: .8;
+          text-transform: uppercase;
+          letter-spacing: 1.4px;
+        }
+  }
+}
   
     &__brands {
       margin-bottom: 3rem; 
       text-align: center;  
+<<<<<<< HEAD
+=======
+           
+>>>>>>> hot-fix
       p {
         @extend %subtitle-text;
         margin-bottom: 1rem;
@@ -20,6 +47,7 @@
       ul {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
   
         li {
           margin: 0 1rem;
@@ -37,4 +65,26 @@
         }
       }
     }
+<<<<<<< HEAD
   }
+=======
+  }
+
+  @include mixins.respond-to('x-small') {
+  
+}
+
+
+@include mixins.respond-to-range(496px, 568px) {
+ 
+}
+
+@include mixins.respond-to-range(496px, 789px) {
+
+}
+
+
+@include mixins.respond-to-range(790px, 1240px) {
+
+}
+>>>>>>> hot-fix

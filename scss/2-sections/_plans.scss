@@ -1,5 +1,6 @@
 @use '../1-base/_variables';
 @use '../1-base/_styles';
+@use '../0-utils/mixins';
 
 .plans {
     margin: 6rem 2rem;
@@ -31,13 +32,22 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    @include mixins.respond-to('x-small') {
+        display: block;
+       }
 
     &__item {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        flex-basis: 400px;
         padding: 3rem 2rem;
         background-color: rgb(26, 26, 26);
         width: 30%;
         border-radius: 14px;
+        @include mixins.respond-to('x-small') {
+            width: 100%;
+            margin-bottom: 1rem;
+           }
         &:first-child h2 {
             color: rgb(139, 114, 255);
         }

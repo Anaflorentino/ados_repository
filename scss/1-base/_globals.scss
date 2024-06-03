@@ -13,8 +13,12 @@ body {
 .container {
     margin: 0 2rem;
 
-    // mobile
-    @include mixins.respond-to('mobile') {
-       margin: 0 1.2rem;
-    }
+
+   
 }
+
+@include mixins.respond-to('x-small') {
+    .container {
+        margin: 0 1rem;
+    }
+ }
