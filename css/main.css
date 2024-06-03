@@ -457,10 +457,11 @@ body {
   height: 5.8rem;
 }
 .hiw__cards__item .hiw__animation.step1 {
-  height: 5rem;
+  max-height: 80px;
 }
 .hiw__cards__item .hiw__animation.step2 {
   padding-left: 1rem;
+  min-height: 90px;
 }
 @media (max-width: 599px) {
   .hiw__cards__item .hiw__animation {
@@ -491,7 +492,8 @@ body {
     text-align: left;
   }
   .hiw__cards__item .hiw__animation {
-    height: 100%;
+    max-height: 90px;
+    min-height: 90px;
     margin-bottom: 0;
     margin-right: 24px;
   }
@@ -1069,7 +1071,7 @@ footer h4 {
   flex-direction: column;
 }
 .services__container .services__content .services__left .services__item {
-  height: 50vh;
+  height: 62vh;
   width: 100%;
   display: flex;
   gap: 1.5rem;
