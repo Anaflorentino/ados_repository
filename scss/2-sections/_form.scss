@@ -177,7 +177,7 @@
 
             input, select, textarea {
                 font-weight: 400;
-                padding: .8rem;
+                padding: .9rem;
                 margin-bottom: .8rem;
                 font-size: .9rem;
                 border-width: 1px;
@@ -188,6 +188,7 @@
                             linear-gradient(-225deg, #535353, #2C2C2C) border-box;
                 border-color: transparent; 
                 transition: .2s;
+                accent-color: rgb(111, 100, 255);
 
                 &:hover,
                 &:focus {
@@ -351,9 +352,7 @@
             }
 
         .contact .form__group input, .contact .form__group select, .contact .form__group textarea {
-        margin-bottom: 1rem;
         margin-bottom: 0.2rem;
-        
         }
 }
 
