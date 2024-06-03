@@ -338,6 +338,11 @@ body {
 .trusted__results {
   margin-bottom: 3rem;
 }
+@media (max-width: 599px) {
+  .trusted__results {
+    display: block;
+  }
+}
 .trusted__results ul {
   display: flex;
   justify-content: center;

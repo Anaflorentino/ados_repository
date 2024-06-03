@@ -11,6 +11,9 @@
     
     &__results {
       margin-bottom: 3rem;
+      @include mixins.respond-to('x-small') {
+       display: block;
+      }
   
       ul {
         display: flex;
@@ -62,7 +65,7 @@
     }
   }
 
-  @include mixins.respond-to-range(360px, 495px) {
+  @include mixins.respond-to('x-small') {
   
 }
 
