@@ -1185,12 +1185,23 @@ footer h4 {
   justify-content: center;
   flex-wrap: wrap;
 }
+@media (max-width: 599px) {
+  .plans__cards {
+    display: block;
+  }
+}
 .plans__cards__item {
   display: block;
   padding: 3rem 2rem;
   background-color: rgb(26, 26, 26);
   width: 30%;
   border-radius: 14px;
+}
+@media (max-width: 599px) {
+  .plans__cards__item {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
 }
 .plans__cards__item:first-child h2 {
   color: rgb(139, 114, 255);
