@@ -1,0 +1,188 @@
+@use '../1-base/_variables';
+@use '../1-base/_styles';
+@use '../0-utils/mixins';
+
+.services__container {
+    padding: 2rem;
+    margin-top: 4rem;
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    .icon {
+        color: variables.$text-special-color;
+    }
+
+    .services__text {
+        margin: 6rem 0;
+        @extend %subtitle-text;
+        text-align: center;
+        margin-bottom: 2rem;
+
+        h2 {
+            @extend %title-text;
+            @extend %text-gradient;
+
+             // x-small
+     @include mixins.respond-to('x-small') {
+       font-size: 2.8rem;
+     }
+            
+        }
+        p {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+    }
+
+    .services__navbar {
+        width: 100%;
+        padding: 2rem 1rem;
+        display: flex;
+        justify-content: space-around;
+        position: sticky;
+        top: 5.8rem;
+        background-color: #1E1E1E;
+        z-index: 10;
+
+        h4 {
+            font-size: 1.5rem;
+            font-weight: 300;
+            opacity: .8;
+        }
+
+        .wrapper__services__bar-progress {
+            position: absolute;
+            bottom: 0;
+            height: .5rem;
+            width: 100%;
+        }
+
+        .services__bar-progress {
+            width: 0;
+            height: .5rem;
+            @extend %btn-gradient;
+        }
+    }
+
+    .services__content {
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        margin: 8rem auto 0 auto;
+        justify-content: space-between;
+
+        .services__left, .services__right {
+            display: flex;
+            width: 45%;
+        }
+
+        .services__left {
+            display: flex;
+            flex-direction: column;
+
+            .services__item {
+                height: 62vh; // TIRAR DEPOIS
+                width: 100%;
+                display: flex;
+                gap: 1.5rem;
+
+                img {
+                    max-width: 4rem;
+                    height: fit-content;
+                    max-height: 4rem;
+                }
+
+                .content {
+                    width: 100%;
+                    gap: 0.75rem;
+                    display: flex;
+                    flex-direction: column;
+
+                    h2 {
+                        font-size: 2rem;
+                        font-weight: 400;
+                    }
+
+                    h3 {
+                        font-size: 1.5rem;
+                        font-weight: 100;
+                        opacity: .8;
+                    }
+
+                    p {
+                        font-weight: 300;
+                        opacity: .8;
+                        margin-bottom: .8rem;
+                    }
+
+                    .plan {
+                        display: flex;
+                        align-items: center;
+                        gap: 1.6rem; 
+
+
+
+
+                        a.cta-button {
+                            background-color: rgba($color: #ffffff, $alpha: 0.03);
+                            color: variables.$text-special-color;
+                            border-radius: 0.6rem;
+                            font-weight: 400;
+                            font-size: 1.4rem;
+                            padding: .8rem 1.5rem;
+                            border: none;
+                            cursor: pointer;
+                            display: flex;
+                            align-items: center;
+                            gap: 1rem;
+                            transition: background-color 0.2s ease;
+
+                            &:hover {
+                                background-color: #1f1f1f6b;
+
+                                span {
+                                    transition: margin-left 0.2s ease;
+                                    margin-left: .6rem;
+                                }
+                            }
+                        }
+
+                        .plan-text {
+                            font-size: 1rem;
+                            color: variables.$text-off-white85-color;
+                            &:hover {
+                                cursor: pointer;
+                                color: variables.$text-white-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .services__right {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            .service__animation {
+                width: 60%;
+                position: absolute;
+                height: 50vh; // TIRAR DEPOIS
+                display: flex;
+                flex-direction: column;
+            }
+
+            #animacaoStep1, #animacaoStep2, #animacaoStep3 {
+                height: auto;
+                opacity: 0;
+            }
+
+            #animacaoStep1 {
+                opacity: 1;
+            }
+        }
+    }
+}

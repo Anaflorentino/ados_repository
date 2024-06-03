@@ -1,21 +1,45 @@
 @use '../1-base/_variables';
+@use '../0-utils/mixins';
 @use '../3-components/components.scss';
 
 .contact {
     @extend %section-spacer;
+    max-width: 1250px;
+    margin: 6rem auto;
     display: flex;
     justify-content: space-between;
+
+    // x-small
+    @include mixins.respond-to('x-small') {
+        display: block;
+    }
+
     &__header {
-        position: -webkit-sticky; /* Para navegadores Webkit */
+        position: -webkit-sticky;
         position: sticky;
         top: 116px;
         z-index: 99999;
+        margin-right: 24px;
+
+        @include mixins.respond-to('x-small') {
+            position: static;
+        }
+
+        
+
         h2 {
             @extend %text-gradient;
             @extend %title-text;
             margin-bottom: 2rem;
             line-height: 1.3;
+            
+            // x-small
+            @include mixins.respond-to('x-small') {
+                margin-bottom: .5rem;
+                font-size: 2.8rem;
+            }
         }
+
         h3 {
             font-size: 2rem;
             line-height: 1;
@@ -23,9 +47,11 @@
             margin-bottom: .4rem;
             color: variables.$text-off-white85-color;
         }
+
         span, i {
             color: variables.$text-off-white45-color;
         }
+
         i {
             margin-right: .1rem;
         }
@@ -38,13 +64,20 @@
         border-radius: 10px;
         padding: 24px;
         align-self: flex-start;
-        min-width: 50%;
+        min-width: 580px;
         max-width: 50%;
         order: 2;
         min-height: 500px;
         width: 50%;
         flex-grow: 1;
         height: max-content;
+
+        // x-small
+        @include mixins.respond-to('x-small') {
+            width: 100%;
+            min-width: 100%;
+            margin-top: 2rem;
+        }
 
         &__title {
             font-size: 1rem;
@@ -59,14 +92,73 @@
             justify-content: space-between;
             margin-bottom: .2rem;
 
+            // x-small
+            @include mixins.respond-to('x-small') {
+                display: block;
+            }
+
+            
+
             .form__group {
                 width: 48%;
+
+                // x-small
+                @include mixins.respond-to('x-small') {
+                    width: 100%;
+                }
+
+                select {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    background: variables.$card-bg-color;
+                    color: variables.$text-off-white45-color;
+                    border: 1px solid variables.$text-off-white45-color;
+                    border-radius: 8px;
+                    padding: 0.8rem;
+                    font-size: 0.9rem;
+                    font-weight: 400;
+                    transition: 0.2s;
+                    position: relative;
+                    cursor: pointer;
+
+
+                    &:hover,
+                    &:focus {
+                        background: variables.$card-bg-color;
+                        border-color: variables.$text-off-white85-color;
+                    }
+
+                    &:focus {
+                        outline: none;
+                    }
+
+                    option {
+                        color: variables.$text-off-white85-color;
+                        background: variables.$card-bg-color;
+                        border: none;
+                        border-radius: 0;
+                        padding: 0.8rem;
+
+                        &:hover,
+                        &:focus {
+                            background: lighten(variables.$card-bg-color, 10%);
+                        }
+                    }
+                }
             }
         }
 
         &__group {
             display: flex;
             flex-direction: column;
+
+            &-services {
+                @include mixins.respond-to('x-small') {
+                    margin-top: 1rem;
+                }
+            }
+
             &-socials {
                 margin-top: 1rem;
             }
@@ -95,7 +187,7 @@
                 background: linear-gradient(90deg, #2B2B2B, #2B2B2B) padding-box, 
                             linear-gradient(-225deg, #535353, #2C2C2C) border-box;
                 border-color: transparent; 
-                transition: .5s;
+                transition: .2s;
 
                 &:hover,
                 &:focus {
@@ -117,6 +209,8 @@
             border-radius: 0;
             margin-bottom: 0;
             padding: .6rem;
+            width: 92%;
+
             &:hover,
             &:focus {
                 background: transparent;
@@ -129,11 +223,24 @@
             width: 100%;
             align-items: center;
             margin-top: 1rem;
+
+            // x-small
+            @include mixins.respond-to('x-small') {
+                display: block;
+            }
+
+            p {
+                // x-small
+                @include mixins.respond-to('x-small') {
+                    font-size: .7rem;
+                }
+            }
         }
 
         #policy {
             font-size: .8rem;
             color: variables.$text-off-white45-color;
+            margin-right: 1rem;
         }
 
         span {
@@ -150,7 +257,13 @@
             padding: .8rem 1.5rem;
             border: none;
             cursor: pointer;
-            transition: .3s;
+            transition: .2s;
+
+            // x-small
+            @include mixins.respond-to('x-small') {
+                width: 100%;
+                margin-top: 1rem;
+            }
 
             &:hover {
                 background-color: #1f1f1f6b;
@@ -176,4 +289,66 @@
 .input-container {
     border-bottom: 1px solid #363636;
     margin-bottom: 0.2rem;
+    display: inline-block;
+    transition: .2s;
+    &:focus-within {
+        border-bottom: 1px solid transparent;
+        border-image:  linear-gradient(90deg, rgb(111, 100, 255) 0%, rgb(178, 106, 255) 50%, rgb(248, 118, 255) 100%);
+        border-image-slice: 1;
+      }
+
+      &:hover {
+        border-bottom: 1px solid #646464;
+      } 
+
+}
+
+.service-1 > input:nth-child(1) {
+    margin-right: 4px;
+    }
+.service-2 > input:nth-child(1) {
+    margin-right: 4px;
+    }
+    
+.service-3 > input:nth-child(1) {
+    margin-right: 4px;
+    }
+
+// regras específicas entre 600px e 929px:
+
+@include mixins.respond-to-range(600px, 996px) {
+    .contact {
+        display: block;
+        margin: 0;
+        margin-top: 6rem;
+        }
+        .contact .form {
+        margin-left: 0;
+        }
+
+        .contact__header {
+           text-align: left;
+           margin-bottom: 2rem;
+           position: static;
+
+
+           h2 {
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            width: 64%;
+           }
+           h3 {
+            text-align: justify;
+           }
+        }
+
+        .contact .form .form__row {
+            margin-bottom: 0.4rem;
+            }
+
+        .contact .form__group input, .contact .form__group select, .contact .form__group textarea {
+        margin-bottom: 1rem;
+        margin-bottom: 0.2rem;
+        
+        }
 }

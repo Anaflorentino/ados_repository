@@ -1,6 +1,7 @@
 // estilos globais para tags sem classes ou atributos
 @use 'reset';
 @use '_variables';
+@use '../0-utils/mixins';
 
 body {
     font-family: variables.$primary-font;
@@ -8,3 +9,17 @@ body {
     color: variables.$text-white-color;
     font-size: 1rem;
 }
+
+.container {
+    margin: 0 2rem;
+
+    // mobile
+
+   
+}
+
+@include mixins.respond-to('x-small') {
+    .container {
+        margin: 0 1rem;
+    }
+ }

@@ -1,17 +1,45 @@
 AdosLabs
 
-To-do:
 
-* tornar as sections responsivas para dispositivos menores;
-* último accordion do Faq não deve conter padding bottom (por conta do position sticky do title - fica entranho);
-* suavizar a transição dos gradientes nos títulos que ficam à esquerda;
+Ajustes:
+*a animação do ultimo card não está sincronizada com as anteriores;
+*a caixa seletora de opções do seletor de serviços precisa ser otimizada para Safari;
+* Os gradientes precisam ser ajustados para se comportarem melhor em telas menores.
+* o min-with dos cards de hiw deve ser 304.7px 
+=> depois disso ele deve encolher os icons e o texto e depois ficar em bloco
+
+
+
+Sugestão de texto:
+Impactul results
+Over 10M Views generated
+
+*altura do scroll entre as sections
+navbar: 90px (header) + 1rem (respiro)
+
+
+To-do:
+* Hero (responsiva para tablet)
+* Trusted by (responsiva para tablet)
+* Services (responsiva)
+* HIW (responsiva)
+
+* suavizar a transição gerais!!!;
 * criar bordas suaves para os cards
-* criar página de plans;
 
 ---------------------------------------------------------
 
 Done:
 
++ Hero/Trusted by (responsivas para mobile)
++ Testimonial (responsiva);
++ FAQ (responsiva);
++ Contact (responsiva para mobile **falta tablet);
++ Header (responsivo)
+
+* criar página de plans;
+* último accordion do Faq não deve conter padding bottom (por conta do position sticky do title - fica entranho);
+* tornar nav responsiva
 * function para fechar o accordion da FAQ section;
 * criar página de privacy policy;
 * subir em um repositório no github

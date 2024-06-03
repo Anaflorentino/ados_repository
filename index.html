@@ -15,40 +15,63 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- main.css -->
     <link rel="stylesheet" href="css/main.css">
+    <!-- Lottie -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.13/lottie.min.js"></script>
+    <!-- Gsap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <!-- nav script -->
+    <script src="./scripts/nav.js" defer></script>
 </head>
 
 <body>
     <!-- h e a d e r -->
-    <header id="header">
-        <!-- nav -->
-        <nav class="navbar">
-            <div class="navbar__logo">
-                <a href="#" class="navbar__logo-link">
-                    <img src="./img/logos/ados-logo.svg" alt="AdosLabs - logo" class="navbar__logo-img">
-                </a>
-            </div>
-            <!-- menu links -->
-            <ul class="navbar__menu">
-                <li class="navbar__menu-item"><a href="#" class="navbar__menu-link">Services</a></li>
-                <li class="navbar__menu-item"><a href="#" class="navbar__menu-link">How it works</a></li>
-                <li class="navbar__menu-item"><a href="#" class="navbar__menu-link">Plans</a></li>
-                <li class="navbar__menu-item"><a href="#" class="navbar__menu-link">FAQ</a></li>
-                <li class="navbar__menu-item"><a href="#" class="navbar__menu-link">Testimonials</a></li>
+    <header id="header" class="header">
+        <nav>
+            <!-- Mobile/Tablet -->
+            <ul class="sidebar">
+                <!-- menu-icon-close -->
+                <li class="nav__links-item menu-icon-close" onclick="toggleSidebar()"><a href="#"><svg
+                            xmlns="http://www.w3.org/2000/svg" fill="rgba(251, 233, 190, 0.80)" height="32px"
+                            viewBox="0 -960 960 960" width="32px">
+                            <path
+                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                        </svg></a></li>
+                <li class="nav__links-item"><a href="#services">Services</a></li>
+                <li class="nav__links-item"><a href="#hiw">How it works</a></li>
+                <li class="nav__links-item"><a href="./plans.html">Plans</a></li>
+                <li class="nav__links-item"><a href="#faq">FAQ</a></li>
+                <li class="nav__links-item"><a href="#testimonial">Testimonial</a></li>
+                <a href="#contact"><button class="nav__btn">Contact us</button></a>
             </ul>
-            <!-- contact button -->
-            <div class="navbar__contact">
-                <a href="#" class="contact-button navbar__contact-button">Contact us</a>
-            </div>
+            <!-- Desktop -->
+            <ul class="container nav">
+                <a href="#hero"><img src="./img/logos/ados-logo.svg" alt="AdosLabs - Logo"></a>
+                <div class="nav__links">
+                    <li class="hideOnMobile nav__links-item"><a href="#services">Services</a></li>
+                    <li class="hideOnMobile nav__links-item"><a href="#hiw">How it works</a></li>
+                    <li class="hideOnMobile nav__links-item"><a href="./plans.html">Plans</a></li>
+                    <li class="hideOnMobile nav__links-item"><a href="#faq">FAQ</a></li>
+                    <li class="hideOnMobile nav__links-item"><a href="#testimonial">Testimonial</a></li>
+                </div>
+                <a href="#contact"><button class="hideOnMobile nav__btn">Contact us</button></a>
+                <!-- menu-icon-open -->
+                <li class="menu-button" onclick="toggleSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                            height="24" fill="rgba(251, 233, 190, 0.80)" viewBox="0 -960 960 960" width="24">
+                            <path
+                                d="M170.001-254.616q-12.75 0-21.375-8.629t-8.625-21.384q0-12.756 8.625-21.371 8.625-8.615 21.375-8.615h619.998q12.75 0 21.375 8.629 8.625 8.628 8.625 21.384 0 12.755-8.625 21.37-8.625 8.616-21.375 8.616H170.001Zm0-195.385q-12.75 0-21.375-8.628-8.625-8.629-8.625-21.384 0-12.756 8.625-21.371 8.625-8.615 21.375-8.615h619.998q12.75 0 21.375 8.628 8.625 8.629 8.625 21.384 0 12.756-8.625 21.371-8.625 8.615-21.375 8.615H170.001Zm0-195.384q-12.75 0-21.375-8.629-8.625-8.628-8.625-21.384 0-12.755 8.625-21.37 8.625-8.616 21.375-8.616h619.998q12.75 0 21.375 8.629t8.625 21.384q0 12.756-8.625 21.371-8.625 8.615-21.375 8.615H170.001Z" />
+                        </svg></a></li>
+            </ul>
         </nav>
     </header>
 
     <div class="container">
-
         <!-- h e r o -->
         <main>
-            <section class="hero">
+            <section class="hero" id="hero">
                 <div class="hero__content">
                     <div class="hero__text">
                         <p class="hero__text-subtitle">THE NEW WAY OF MARKETING</p>
@@ -85,37 +108,148 @@
                     <li><span>Canada</span></li>
                 </ul>
             </div>
+            <div class="trusted__results">
+                <ul>
+                    <li><span>270K Followers</span></li>
+                    <li><span>100M Views</span></li>
+                    <li><span>Engagement 75% up</span></li>
+                </ul>
+            </div>
+
         </div>
+
+        <!-- s e r v i c e s // -->
+        <section class="services__container" id="services">
+            <div class="services__text">
+                <p>Our services</p>
+                <h2>Where innovation meets aesthetics</h2>
+            </div>
+            <div class="services__navbar">
+                <div class="services__navbar__item">
+                    <h4>Short-Form </h4>
+                </div>
+                <div class="services__navbar__item">
+                    <h4>Long-Form</h4>
+                </div>
+                <div class="service__navbar__item">
+                    <h4>Webdesign</h4>
+                </div>
+                <div class="wrapper__services__bar-progress">
+                    <div class="services__bar-progress"></div>
+                </div>
+
+            </div>
+            <div class="services__content">
+                <div class="services__left">
+                    <div id="service__1" class="services__item">
+                        <img src="./img/services/slow-motion.png" alt="">
+                        <div class="content">
+                            <h2>
+                                Short-Form
+                            </h2>
+                            <h3>
+                                The best way to Grab attention.
+                            </h3>
+                            <p>
+                                No views? We generated over 100M views with Motion Videos. With our method we found the
+                                cheatcode to social media. We create unmatch videos custom for you. In your unique
+                                brandvoice.
+                            </p>
+                            <div class="plan">
+                                <a href="#" class="cta-button" target="_blank">Contact us<span
+                                        class="material-symbols-outlined icon">arrow_forward</span></a>
+                                <a href="#"><span class="plan-text">Starting at $149</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="service__2" class="services__item">
+                        <img src="./img/services/slow-motion.png" alt="">
+                        <div class="content">
+                            <h2>
+                                Long-Form
+                            </h2>
+                            <h3>
+                                Your custom Explainer Videos
+                            </h3>
+                            <p>
+                                Convert more people than ever before. Explainer vídeos are the best way to present your
+                                software and products in
+                                a modern and engagin way.
+                            </p>
+                            <div class="plan">
+                                <a href="#" class="cta-button" target="_blank">Contact us<span
+                                        class="material-symbols-outlined icon">arrow_forward</span></a>
+                                <a href="#"><span class="plan-text">Starting at $999</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="service__3" class="services__item">
+                        <img src="./img/services/slow-motion.png" alt="">
+                        <div class="content">
+                            <h2>
+                                Webdesign
+                            </h2>
+                            <h3>
+                                Be unique
+                            </h3>
+                            <p>
+                                We craft standout brands by diving deep into your essence, distilling your uniqueness,
+                                and ensuring consistency across all touch points. We make sure your brand conveys the
+                                right feelings and goals that appeal to your dream audience. Let's make your brand
+                                unforgettable.
+                            </p>
+                            <div class="plan">
+                                <a href="#" class="cta-button" target="_blank">Contact us<span
+                                        class="material-symbols-outlined icon">arrow_forward</span></a>
+                                <span class="plan-text">Starting at $1,999</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="services__right">
+                    <div id="animacaoStep1" class="service__animation serviceStep1"></div>
+                    <div id="animacaoStep2" class="service__animation serviceStep2"></div>
+                    <div id="animacaoStep3" class="service__animation serviceStep3"></div>
+                </div>
+            </div>
+        </section>
+
         <!-- h o w - i t - w o r k s -->
-        <section class="hiw__container">
+        <section class="hiw__container" id="hiw">
             <div class="hiw__text">
                 <h2>How it works</h2>
                 <p>3 steps to success</p>
             </div>
             <div class="hiw__cards">
                 <!-- Card 1 -->
-                <div class="hiw__cards__item">
-                    <h3>Get in touch</h3>
-                    <p>Lets jump on a call and see if we are good fit to work together</p>
-                    <img class="card__animation" src="./img/icons/card-icon.svg" alt="card animation">
+                <div class="hiw__cards__item hiw__cards__item--height">
+                    <div class="hiw__text--content">
+                        <h3>Get in touch</h3>
+                        <p>Let's jump on a call and see what we can do for you.</p>
+                    </div>
+                    <div class="hiw__animation step1"></div>
+
                 </div>
                 <!-- Card 2 -->
                 <div class="hiw__cards__item hiw__cards__item--height">
-                    <img class="card__animation" src="./img/icons/card-icon.svg" alt="card animation">
-                    <h3>Agreement and take off</h3>
-                    <p>If we are a good fit, we clarify our service and goals for our partnership. As soon as that is
-                        done, we are ready to take off</p>
+                    <div class="hiw__text--content">
+                        <h3>Agreement <br> and take off</h3>
+                        <p>We clarify our services and goals for our partnership and take off.</p>
+                    </div>
+                    <div class="hiw__animation step2"></div>
                 </div>
                 <!-- Card 3 -->
-                <div class="hiw__cards__item">
-                    <h3>Fullfilment</h3>
-                    <p>We always deliver in time and if possible even faster.</p>
-                    <img class="card__animation" src="./img/icons/card-icon.svg" alt="card animation">
+                <div class="hiw__cards__item hiw__cards__item--height">
+                    <div class="hiw__text--content">
+                        <h3>Fullfilment</h3>
+                        <p>We Always deliver in time and if possible even faster.</p>
+                    </div>
+                    <div class="hiw__animation step3"></div>
                 </div>
             </div>
         </section>
         <!-- f a q -->
-        <section class="faq">
+        <section class="faq" id="faq">
             <div class="faq__container">
                 <div class="faq__header">
                     <h2>FAQ</h2>
@@ -126,7 +260,7 @@
                     <div class="faq__accordion__item">
                         <!-- pergunta 1 -->
                         <button class="faq__question" id="q1">
-                            Why should I choose AdosLabs over a cheaper freelancer?
+                            <span>Why should I choose AdosLabs over a cheaper freelancer?</span>
                             <i class="fa-solid fa-chevron-down"></i>
                         </button>
                         <!-- resposta 1 -->
@@ -146,90 +280,28 @@
                     <div class="faq__accordion__item">
                         <!-- pergunta 2 -->
                         <button class="faq__question" id="q2">
-                            What can I expect from my subscription?
+                            How much time do you need for one video?
                             <i class="fa-solid fa-chevron-down"></i>
                         </button>
                         <!-- resposta 2 -->
                         <div class="faq__answer" id="a2">
                             <p>
-                                Your subscription plan is designed to guarantee you a minimum number of videos each
-                                month,
-                                ensuring you always have fresh and high-quality content to gift to your audience. We
-                                work mainly
-                                with minimalist motion videos or explainer videos but we are always open for new
-                                challenges.
-                                However, we often exceed these expectations, delivering more videos when our workload
-                                permits
-                                and we have sufficient content from your end.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="faq__accordion__item">
-                        <!-- pergunta 3 -->
-                        <button class="faq__question" id="q3">
-                            How much time do you need for one video?
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </button>
-                        <!-- resposta 3 -->
-                        <div class="faq__answer" id="a3">
-                            <p>
-                                We usually deliver within 2-3 business days. Depending on the complexity and length of
-                                the video, it can take more or less time. We are always at our desks and ensure
-                                consistent delivery with no unexpected waiting times. By the way, customer satisfaction
-                                is our priority. We will optimize the videos to your wish up to 3 times per project.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="faq__accordion__item">
-                        <!-- pergunta 4 -->
-                        <button class="faq__question" id="q4">
-                            How can I make a request?
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </button>
-                        <!-- resposta 4 -->
-                        <div class="faq__answer" id="a4">
-                            <p>
-                                We create a Trello platform for each client, making it easy for you to make requests and
-                                keep
-                                you up to date. Request can be made with a simple script or topic suggestion from your
-                                end.
-                                We
-                                will take care of concepts and visuals. Of course you can deliver more like storyboard
-                                or
-                                even
-                                loom videos, everything that helps us to take your vision into reality. During our
-                                onboarding
-                                process, we will introduce you to our platforms and explain in detail how we work.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="faq__accordion__item">
-                        <!-- pergunta 5 -->
-                        <button class="faq__question" id="q5">
-                            How can I make a request?
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </button>
-                        <!-- resposta 5 -->
-                        <div class="faq__answer" id="a5">
-                            <p>
-                                We create a Trello platform for each client, making it easy for you to make requests and
-                                keep you up to date. Request can be made with a simple script or topic suggestion from
-                                your end. We will take care of concepts and visuals. Of course you can deliver more like
-                                storyboard or even loom videos, everything that helps us to take your vision into
-                                reality. During our onboarding process, we will introduce you to our platforms and
-                                explain in detail how we work.
+                                Is this fast paced world, speed is essential! We can create short-form vídeos from
+                                scratch within 48h. But it's all depending on complexity and lenght of the vídeo and our
+                                workload of course.
+
                             </p>
                         </div>
                     </div>
 
                     <div class="faq__accordion__item">
-                        <!-- pergunta 6 -->
-                        <button class="faq__question" id="q6">
+                        <!-- pergunta 3 -->
+                        <button class="faq__question" id="q3">
                             How does the process of developing a web page work?
                             <i class="fa-solid fa-chevron-down"></i>
                         </button>
-                        <!-- resposta 6 -->
-                        <div class="faq__answer" id="a6">
+                        <!-- resposta 3 -->
+                        <div class="faq__answer" id="a3">
                             <p>
                                 When choosing to build your site with us, you'll have access to a team of experienced
                                 developers
@@ -257,13 +329,13 @@
                         </div>
                     </div>
                     <div class="faq__accordion__item">
-                        <!-- pergunta 7 -->
-                        <button class="faq__question" id="q7">
+                        <!-- pergunta 4 -->
+                        <button class="faq__question" id="q4">
                             Is ongoing support and maintenance included after the project is completed?
                             <i class="fa-solid fa-chevron-down"></i>
                         </button>
-                        <!-- resposta 7 -->
-                        <div class="faq__answer" id="a7">
+                        <!-- resposta 4 -->
+                        <div class="faq__answer" id="a4">
                             <p>
                                 Yes, we offer ongoing support and maintenance services to ensure your website or
                                 software
@@ -282,7 +354,7 @@
             </div>
         </section>
         <!-- t e s t i m o n i a l s -->
-        <section class="testimonials">
+        <section class="testimonials" id="testimonial">
             <div class="testimonials__header">
                 <h2>Testimonials</h2>
                 <h3>That’s what other people think about our services</h3>
@@ -325,7 +397,7 @@
             </div>
         </section>
         <!-- c o n t a c t - f o r m -->
-        <div class="contact">
+        <div class="contact" id="contact">
             <div>
                 <div class="contact__header">
                     <h2>Do you have a cool project?</h2>
@@ -404,15 +476,15 @@
                         <label for="services">Which service are you looking for?</label>
                         <div class="service-1">
                             <input type="checkbox" name="services[]" value="Motion Videos">
-                            <label class="service label" for="service-1">Motion Videos</label>
+                            <label class="service label" for="service-1">Short-Form</label>
                         </div>
                         <div class="service-2">
                             <input type="checkbox" name="services[]" value="Webdesign">
-                            <label class="service label" for="service-2">Webdesign</label>
+                            <label class="service label" for="service-2">Long-Form</label>
                         </div>
                         <div class="service-3">
                             <input type="checkbox" name="services[]" value="Branding">
-                            <label class="service label" for="service-3">Branding</label>
+                            <label class="service label" for="service-3">Webdesign</label>
                         </div>
                     </div>
                 </div>
@@ -424,7 +496,8 @@
                 <div id="privacy">
                     <!-- Privacy policy -->
                     <div class="form__group form__group-full" id="policy">
-                        <p>By continuing, you agree to our <a href="#"><span>privacy policy.</span></a></p>
+                        <p>By continuing, you agree to our <a href="./privacy-policy.html"><span>privacy
+                                    policy.</span></a></p>
                     </div>
                     <!-- Submit button -->
                     <button class="cta-button" type="submit">Send to contact</button>
@@ -433,12 +506,13 @@
         </div>
         <!-- f o o t e r -->
         <footer>
-            <a href="#"><img src="./img/logos/ados-logo.svg" alt="AdosLabs - logo"></a>
+            <a href="./index.html"><img src="./img/logos/ados-logo.svg" alt="AdosLabs - logo"></a>
             <h4>®2024 AdosLabs. All rights reserved to AdosMind and Torrance Labs.</h4>
         </footer>
 
         <!-- JavaScript -->
         <script src="./scripts/faq.js"></script>
+        <script src="./scripts/services.js"></script>
+        <script src="./scripts/hiw.js"></script>
 </body>
-
 </html>
