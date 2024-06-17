@@ -1,10 +1,5 @@
-// Arquivo principal
-// Todos os imports de subdiretórios *.scss
 @use './0-utils/utils.scss';
 @use './1-base/base.scss';
 @use './2-sections/sections.scss';
 @use './3-components/components.scss';
 @use '../scss/2-sections/services';
-
-// $ sass --watch scss/main.scss:css/main.css
-// Este comando observa as mudanças e gera uma pasta css com um arquivo 'main.css' contendo todos os estilos compilados. 
