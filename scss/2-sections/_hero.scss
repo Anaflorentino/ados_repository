@@ -6,14 +6,15 @@
 .hero {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     &__content {
         width: 100%;
         max-width: 1250px;
         margin: 0 auto;
         display: flex;
-        align-items: flex-start;
         justify-content: space-between;
+        margin-bottom: 32px;
     }
 
     &__text {
