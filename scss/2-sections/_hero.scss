@@ -4,7 +4,6 @@
 @use '../0-utils/mixins';
 
 .hero {
-    @extend %section-spacer;
     display: flex;
     align-items: center;
 
@@ -15,6 +14,8 @@
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
+        border-bottom: 1px solid;
+        @extend %border-bottom-gradient;
     }
 
     &__text {
@@ -37,7 +38,7 @@
         &-title {
             font-size: 4rem;
             font-weight: 900;
-            margin-bottom: 30px;
+            margin-bottom: 24px;
             text-transform: uppercase;
         }
 
@@ -53,8 +54,10 @@
     }
 
     &__video {
-        width: 48%;
-        cursor: pointer;
+        width: 46%;
+        video {
+            cursor: pointer;
+        }
 
         &-frame {
             max-width: 100%;

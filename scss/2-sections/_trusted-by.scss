@@ -3,88 +3,74 @@
 
 .trusted {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-bottom: 1px solid;
-    @extend %border-bottom-gradient;
+    margin-bottom: 64px;
     
+    
+    &__world {
+      text-align: end;
+      p {
+        @extend %subtitle-text;
+        margin-bottom: .4rem;
+
+        margin-top: 1rem;
+        color: variables.$text-off-white85-color;
+      }
+      ul {
+        display: inline-flex;
+        gap: 1rem;
+       
+
+  }
+      li {
+        color: variables.$text-off-white85-color;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 1.8px;
+      }
+    }
+
     &__results {
       margin-bottom: 3rem;
-      @include mixins.respond-to('x-small') {
-       display: block;
-      }
-  
+
       ul {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
   
-        li {
-          margin: 0 1.4rem;
-          color: variables.$text-special-color;
-          font-size: 2rem;
-          font-weight: 600;
-          opacity: .8;
-          text-transform: uppercase;
-          letter-spacing: 1.4px;
-        }
+       
   }
 }
   
     &__brands {
-      margin-bottom: 3rem; 
-      text-align: center;  
-<<<<<<< HEAD
-=======
-           
->>>>>>> hot-fix
+      margin: 1rem 0; 
+      text-align: left;  
       p {
         @extend %subtitle-text;
-        margin-bottom: 1rem;
+        margin-bottom: .4rem;
+        margin-left: .4rem;
         color: variables.$text-off-white85-color;
       }
+
+      
   
       ul {
         display: flex;
-        justify-content: center;
+        gap: 1rem;
         flex-wrap: wrap;
   
         li {
-          margin: 0 1rem;
           color: variables.$text-off-white45-color;
-          font-size: 36px;
+          font-size: 20px;
           font-weight: 300;
           text-transform: uppercase;
           letter-spacing: 2px;
         }
   
         img {
-          height: 46px;
+          height: 32px;
           opacity: 80%; 
-          width: auto;
         }
       }
     }
-<<<<<<< HEAD
   }
-=======
-  }
-
-  @include mixins.respond-to('x-small') {
-  
-}
-
-
-@include mixins.respond-to-range(496px, 568px) {
- 
-}
-
-@include mixins.respond-to-range(496px, 789px) {
-
-}
-
-
-@include mixins.respond-to-range(790px, 1240px) {
-
-}
->>>>>>> hot-fix
