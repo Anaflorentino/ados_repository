@@ -14,8 +14,6 @@
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
-        border-bottom: 1px solid;
-        @extend %border-bottom-gradient;
     }
 
     &__text {
@@ -55,6 +53,7 @@
 
     &__video {
         width: 46%;
+        text-align: end;
         video {
             cursor: pointer;
         }

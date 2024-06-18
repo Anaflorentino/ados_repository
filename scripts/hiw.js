@@ -3,7 +3,7 @@ var animationStep1 = bodymovin.loadAnimation({
     renderer: 'svg',
     loop: false,
     autoplay: false,
-    path: './img/how-it-works/step1.json'
+    path: './assets/icon-1.json'
 });
 
 var animationStep2 = bodymovin.loadAnimation({
@@ -11,7 +11,7 @@ var animationStep2 = bodymovin.loadAnimation({
     renderer: 'svg',
     loop: false,
     autoplay: false,
-    path: './img/how-it-works/step2.json'
+    path: './assets/icon-2.json'
 })
 
 var animationStep3 = bodymovin.loadAnimation({
@@ -19,7 +19,7 @@ var animationStep3 = bodymovin.loadAnimation({
     renderer: 'svg',
     loop: false,
     autoplay: false,
-    path: './img/how-it-works/step3.json'
+    path: './assets/icon-3.json'
 })
 
 

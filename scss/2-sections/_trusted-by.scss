@@ -3,7 +3,12 @@
 
 .trusted {
     display: flex;
-    margin-bottom: 64px;
+    flex-wrap: wrap;
+    margin: 0 24px;
+    margin-bottom: 36px;
+    justify-content: space-between;
+    align-items: first baseline;
+    
     
     
     &__world {
@@ -18,23 +23,22 @@
       ul {
         display: inline-flex;
         gap: 1rem;
+
+        li {
+          img {
+            height: 22px;
+          }
+        }
        
 
   }
-      li {
-        color: variables.$text-off-white85-color;
-        font-size: 20px;
-        font-weight: 400;
-        text-transform: uppercase;
-        letter-spacing: 1.8px;
-      }
     }
 
     &__results {
       margin-bottom: 3rem;
 
       ul {
-        display: flex;
+        display: inline-flex;
         justify-content: center;
         flex-wrap: wrap;
   
@@ -43,8 +47,7 @@
 }
   
     &__brands {
-      margin: 1rem 0; 
-      text-align: left;  
+      margin: 1rem 0;   
       p {
         @extend %subtitle-text;
         margin-bottom: .4rem;
@@ -55,9 +58,9 @@
       
   
       ul {
-        display: flex;
+        display: inline-flex;
         gap: 1rem;
-        flex-wrap: wrap;
+        text-align: start;
   
         li {
           color: variables.$text-off-white45-color;
@@ -68,7 +71,7 @@
         }
   
         img {
-          height: 32px;
+          height: 28px;
           opacity: 80%; 
         }
       }
