@@ -154,7 +154,7 @@ body {
   border-radius: 10px;
   background: linear-gradient(90deg, #1E1E1E, #1E1E1E) padding-box, linear-gradient(-225deg, rgba(83, 83, 83, 0.2392156863), rgba(44, 44, 44, 0.1215686275)) border-box;
   border-color: transparent;
-  transition: ease-in 0.4s;
+  transition: ease-in 0.3s;
   cursor: pointer;
 }
 
