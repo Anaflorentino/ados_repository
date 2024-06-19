@@ -433,9 +433,9 @@
                         <label class="label label--hidden" for="select">I am a...</label>
                         <select name="select" id="select" required aria-label="Select">
                             <option value="" disabled selected class="placeholder">I am a...</option>
-                            <option value="op-1">Person</option>
-                            <option value="op-2">Entrepreneur</option>
-                            <option value="op-3">Company</option>
+                            <option value="person">Person</option>
+                            <option value="entrepreneur">Entrepreneur</option>
+                            <option value="company">Company</option>
                         </select>
                     </div>
                 </div>
@@ -463,15 +463,15 @@
                     <div class="form__group form__group-full form__group-services">
                         <label for="services">Which service are you looking for?</label>
                         <div class="service-1">
-                            <input type="checkbox" name="services[]" value="Motion Videos">
+                            <input type="checkbox" name="services[]" id="option-1" value="Motion Videos">
                             <label class="service label" for="service-1">Short-Form</label>
                         </div>
                         <div class="service-2">
-                            <input type="checkbox" name="services[]" value="Webdesign">
+                            <input type="checkbox" name="services[]"  id="option-2" value="Webdesign">
                             <label class="service label" for="service-2">Long-Form</label>
                         </div>
                         <div class="service-3">
-                            <input type="checkbox" name="services[]" value="Branding">
+                            <input type="checkbox" name="services[]" id="option-3" value="Branding">
                             <label class="service label" for="service-3">Webdesign</label>
                         </div>
                     </div>
@@ -502,6 +502,57 @@
         <script src="./scripts/faq.js"></script>
         <script src="./scripts/services.js"></script>
         <script src="./scripts/hiw.js"></script>
+
+        <script>
+            document.getElementById('form').addEventListener('submit', function(event) {
+                event.preventDefault();
+    
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const tel = document.getElementById('tel').value;
+                const message = document.getElementById('message').value;
+                const company = document.getElementById('company').value;
+                const country = document.getElementById('country').value;
+                const select = document.getElementById('select').value;
+                const social1 = document.getElementById('social-1').value;
+                const social2 = document.getElementById('social-2').value;
+                const social3 = document.getElementById('social-3').value;
+                const service1 = document.getElementById('option-1').value;
+                const service2 = document.getElementById('option-2').value;
+                const service3 = document.getElementById('option-3').value;
+    
+                fetch('http://localhost:5501/send-email', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        name,
+                        email,
+                        tel,
+                        message,
+                        company,
+                        country,
+                        select,
+                        social1,
+                        social2,
+                        social3,
+                        service1,
+                        service2,
+                        service3
+
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    alert(data.message);
+                })
+                .catch(error => {
+                    console.error('Erro:', error);
+                    alert('Erro ao enviar email: ' + error.message);
+                });
+            });
+        </script>
 </body>
 
 </html>
