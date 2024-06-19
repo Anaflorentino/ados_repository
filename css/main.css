@@ -335,6 +335,14 @@ body {
     font-size: 3.2rem;
   }
 }
+@media (min-width: 340px) and (max-width: 799px) {
+  .hero__content {
+    margin-bottom: 1rem;
+  }
+  .hero__text, .hero__video {
+    margin-bottom: 1;
+  }
+}
 .trusted {
   display: flex;
   flex-wrap: wrap;
@@ -393,6 +401,24 @@ body {
   opacity: 80%;
 }
 
+@media (min-width: 340px) and (max-width: 800px) {
+  .trusted__brands p {
+    margin-left: 0;
+  }
+  .trusted__brands ul img {
+    height: 22px;
+  }
+  .trusted__brands ul {
+    flex-wrap: wrap;
+  }
+  .trusted__world {
+    text-align: start;
+    margin-left: 0.4px;
+  }
+  .trusted__world ul li img {
+    height: 20px;
+  }
+}
 .hiw__container {
   padding: 2rem;
   max-width: 1250px;
@@ -1003,8 +1029,6 @@ footer h4 {
   margin-top: 4rem;
   max-width: 1250px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
 }
 .services__container .icon {
   color: #FBE9BE;
@@ -1132,6 +1156,7 @@ footer h4 {
   display: flex;
   flex-direction: column;
   position: relative;
+  align-items: center;
 }
 .services__container .services__content .services__right .service__animation {
   width: 60%;
@@ -1148,6 +1173,38 @@ footer h4 {
   opacity: 1;
 }
 
+@media (max-width: 1000px) {
+  .services__container .services__content .services__left .services__item .content .plan {
+    flex-direction: column;
+    align-self: flex-start;
+  }
+  .services__container {
+    padding: 0;
+  }
+}
+@media (max-width: 768px) {
+  .services__item img {
+    display: none;
+  }
+}
+@media (max-width: 590px) {
+  .services__container .services__content .services__right {
+    display: none;
+  }
+  .services__container .services__content .services__left {
+    width: 100%;
+  }
+  .services__container .services__content .services__left .services__item .content .plan {
+    flex-direction: row;
+    align-self: flex-start;
+  }
+  .services__container .services__content .services__left .services__item .content .plan a.cta-button {
+    text-wrap: nowrap;
+  }
+  .services__container .services__navbar {
+    display: none;
+  }
+}
 .plans {
   margin: 6rem 2rem;
 }

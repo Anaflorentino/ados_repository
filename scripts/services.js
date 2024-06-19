@@ -33,10 +33,11 @@ const tlPin = gsap.timeline({
     scrollTrigger: {
         trigger: '.services__right',
         pin: true,
-        start: "top 20%",
+        start: "top 30%",
         end: "bottom 80%",
     }
 })
+
 
 const triggerStep1 = document.querySelector('#service__1')
 const triggerStep2 = document.querySelector('#service__2')
@@ -97,8 +98,10 @@ tlBarProgress.to(barProgress, {
     width: '100%'
 })
 
-// Altura do position: sticky top 
-const servicesNavbar = document.querySelector('.services__navbar');
-const navbar = document.querySelector('.navbar');
+// // Altura do position: sticky top 
+// const servicesNavbar = document.querySelector('.services__navbar');
+// const navbar = document.querySelector('.navbar');
 
-servicesNavbar.style.top = navbar.offsetHeight + 'px';
+// servicesNavbar.style.top = navbar.offsetHeight + 'px';
+
+

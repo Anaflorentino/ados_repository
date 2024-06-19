@@ -79,3 +79,30 @@
       }
     }
   }
+
+
+
+  @media (min-width: 340px) and (max-width: 800px) {
+
+
+    .trusted__brands p {
+      margin-left: 0;
+    }
+    .trusted__brands ul img {
+      height: 22px;
+    }
+    
+    .trusted__brands ul {
+      flex-wrap: wrap;
+    }
+    
+    .trusted__world {
+      text-align: start;
+      margin-left: .4px;
+    }
+    
+    .trusted__world ul li img {
+      height: 20px;
+    }
+    
+  }
