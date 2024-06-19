@@ -19,8 +19,6 @@ navbar: 90px (header) + 1rem (respiro)
 
 
 To-do:
-* Hero (responsiva para tablet)
-* Trusted by (responsiva para tablet)
 * Services (responsiva)
 * HIW (responsiva)
 
@@ -31,6 +29,8 @@ To-do:
 
 Done:
 
+* Trusted by (responsiva para tablet)
+* Hero (responsiva para tablet)
 + Hero/Trusted by (responsivas para mobile)
 + Testimonial (responsiva);
 + FAQ (responsiva);
