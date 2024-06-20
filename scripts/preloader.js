@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    
     var animation = lottie.loadAnimation({
         container: document.getElementById('loader-container'), 
         renderer: 'svg',
@@ -14,6 +13,10 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(function() {
             document.getElementById('preloader').style.display = 'none';
             document.getElementById('content').style.display = 'block';
+
+            // Inicialize o ScrollTrigger após a animação de preload ser concluída
+            initializeScrollTriggers();
+
         }, preloaderDuration);
     });
 });

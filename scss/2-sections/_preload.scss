@@ -8,10 +8,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(19, 19, 19); // Cor de fundo do preloader
+    background-color: rgb(19, 19, 19); 
     z-index: 9999;
 }
 
 #content {
-    display: none; // Inicialmente, o conteúdo estará escondido
+    display: none;
 }
