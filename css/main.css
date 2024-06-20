@@ -630,12 +630,21 @@ body {
   margin-bottom: 1.4rem;
   transition: 0.4s;
 }
-.faq__accordion__item:hover, .faq__accordion__item.active {
+.faq__accordion__item:hover {
   cursor: pointer;
   background-color: #353535;
 }
 @media (max-width: 599px) {
-  .faq__accordion__item:hover:hover, .faq__accordion__item:hover.active, .faq__accordion__item.active:hover, .faq__accordion__item.active.active {
+  .faq__accordion__item:hover {
+    background-color: #2B2B2B;
+  }
+}
+.faq__accordion__item.active {
+  cursor: pointer;
+  background-color: #353535;
+}
+@media (max-width: 599px) {
+  .faq__accordion__item.active {
     background-color: #2B2B2B;
   }
 }
@@ -652,7 +661,7 @@ body {
   border: none;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
-  transition: 0.4s;
+  transition: background-color 0.4s ease, color 0.4s ease;
   display: flex;
   line-height: 1;
   justify-content: space-between;
@@ -675,6 +684,8 @@ body {
   color: rgba(255, 255, 255, 0.85);
   font-weight: 300;
   display: none;
+  cursor: auto;
+  transition: opacity 0.4s ease;
 }
 
 .rotate-icon {

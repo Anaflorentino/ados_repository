@@ -64,21 +64,35 @@
         flex: 0 0 70%;
         display: block;
         width: 100%;
+
         &__item {
             border-radius: 12px;
             background-color: variables.$card-bg-color;
             margin-bottom: 1.4rem;
             transition: .4s;
-            &:hover, &.active {
+            
+            &:hover {
                 cursor: pointer; 
                 background-color: lighten(variables.$card-bg-color, 4%);
-             
-            &:hover, &.active {
-                @include mixins.respond-to('x-small') {
+            }
+
+            // x-small
+    @include mixins.respond-to('x-small') {
+        &:hover {
+            background-color: variables.$card-bg-color;
+        }
+    }
+
+            &.active {
+                cursor: pointer; 
+                background-color: lighten(variables.$card-bg-color, 4%);
+            }
+            @include mixins.respond-to('x-small') {
+                &.active {
                     background-color: variables.$card-bg-color;
-                   }
+                }
             }
-            }
+            
         }
     }
     &__question {
@@ -94,7 +108,7 @@
         border: none;
         border-top-left-radius: 12px;
         border-top-right-radius: 12px;
-        transition: .4s;
+        transition: background-color 0.4s ease, color 0.4s ease;
         display: flex;
         line-height: 1;
         justify-content: space-between;
@@ -118,6 +132,8 @@
         color: variables.$text-off-white85-color;
         font-weight: 300;
         display: none;
+        cursor: auto;
+        transition: opacity 0.4s ease;
     }
 }
 
