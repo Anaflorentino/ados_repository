@@ -17,9 +17,6 @@ body {
 
 .container {
     margin: 0 2rem;
-
-
-   
 }
 
 @include mixins.respond-to('x-small') {
