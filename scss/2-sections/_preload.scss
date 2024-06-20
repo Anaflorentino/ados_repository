@@ -1,0 +1,17 @@
+// styles.scss
+#preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(19, 19, 19); // Cor de fundo do preloader
+    z-index: 9999;
+}
+
+#content {
+    display: none; // Inicialmente, o conteúdo estará escondido
+}

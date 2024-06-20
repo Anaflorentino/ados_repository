@@ -53,7 +53,7 @@
     }
 
     &__video {
-        width: 48%;
+        width: 46%;
         text-align: end;
         video {
             cursor: pointer;
@@ -142,3 +142,13 @@
         }
     }
 }
+
+@media (min-width: 340px) and (max-width: 799px) {
+    .hero__content {
+         margin-bottom: 1rem;
+    }
+    .hero__text, .hero__video {
+      margin-bottom: 1;
+    }
+  }
+  
