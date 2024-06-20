@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
         renderer: 'svg',
         loop: false,
         autoplay: true,
-        path: './assets/loading.json' 
+        path: './assets/Loading.json' 
     });
 
     window.addEventListener('load', function() {
