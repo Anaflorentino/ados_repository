@@ -9,6 +9,7 @@
     padding: 2rem;
     max-width: 1250px;
     margin: 0 auto;
+    margin-top: 48px;
 
      // x-small
      @include mixins.respond-to('x-small') {

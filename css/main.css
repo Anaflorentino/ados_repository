@@ -445,6 +445,7 @@ body {
   padding: 2rem;
   max-width: 1250px;
   margin: 0 auto;
+  margin-top: 48px;
 }
 @media (max-width: 599px) {
   .hiw__container {
@@ -1206,6 +1207,9 @@ footer h4 {
   }
   .services__container .services__navbar {
     display: none;
+  }
+  .services__container .services__content .services__left .services__item {
+    height: 40vh;
   }
 }
 .plans {
