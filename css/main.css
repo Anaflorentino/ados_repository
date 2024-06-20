@@ -42,6 +42,11 @@ footer, .contact, .testimonials__container, .faq__container, .hiw__container {
   margin: 6rem 0;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 180px;
+}
+
 body {
   font-family: "Onest", sans-serif;
   background-color: #1E1E1E;
@@ -271,7 +276,7 @@ body {
   height: 1rem;
 }
 .hero__video {
-  width: 50%;
+  width: 46%;
   text-align: end;
 }
 .hero__video video {

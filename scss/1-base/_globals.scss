@@ -3,6 +3,11 @@
 @use '_variables';
 @use '../0-utils/mixins';
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 180px;
+}
+
 body {
     font-family: variables.$primary-font;
     background-color: variables.$bg-color;
