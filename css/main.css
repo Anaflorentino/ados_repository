@@ -628,7 +628,7 @@ body {
   border-radius: 12px;
   background-color: #2B2B2B;
   margin-bottom: 1.4rem;
-  transition: 0.2s;
+  transition: 0.4s;
 }
 .faq__accordion__item:hover, .faq__accordion__item.active {
   cursor: pointer;

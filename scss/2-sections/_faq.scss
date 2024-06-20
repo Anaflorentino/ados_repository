@@ -68,7 +68,7 @@
             border-radius: 12px;
             background-color: variables.$card-bg-color;
             margin-bottom: 1.4rem;
-            transition: .2s;
+            transition: .4s;
             &:hover, &.active {
                 cursor: pointer; 
                 background-color: lighten(variables.$card-bg-color, 4%);
