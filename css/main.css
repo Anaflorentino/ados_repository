@@ -635,7 +635,7 @@ body {
   background-color: #353535;
 }
 @media (max-width: 599px) {
-  .faq__accordion__item:hover:hover, .faq__accordion__item.active:hover {
+  .faq__accordion__item:hover:hover, .faq__accordion__item:hover.active, .faq__accordion__item.active:hover, .faq__accordion__item.active.active {
     background-color: #2B2B2B;
   }
 }

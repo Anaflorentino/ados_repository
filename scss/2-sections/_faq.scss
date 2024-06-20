@@ -73,7 +73,7 @@
                 cursor: pointer; 
                 background-color: lighten(variables.$card-bg-color, 4%);
              
-            &:hover {
+            &:hover, &.active {
                 @include mixins.respond-to('x-small') {
                     background-color: variables.$card-bg-color;
                    }
